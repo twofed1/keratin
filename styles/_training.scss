@@ -1,0 +1,19 @@
+.training{
+  display: flex;
+  flex-direction: column;
+  padding: 7rem 3rem 6rem;
+  border-color: $secondary;
+  border-style: solid;
+  border-width: 1rem 0;
+  .heading{
+    margin-bottom: 7rem;
+    padding-right: 2rem;
+  }
+  .btn{
+    width: 18rem;
+    margin: auto;
+  }
+  &__desc{
+    margin-bottom: 7rem;
+  }
+}

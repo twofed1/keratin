@@ -1,0 +1,22 @@
+footer{
+  padding: 4rem 3rem 5rem;
+  color: $grey_text;
+}
+
+.footer{
+  &__socials{
+    margin: 2rem 0;
+  }
+  &__links{
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  &__link{
+    &:not(:last-child){
+      padding-right: 1rem;
+      margin-right: 1rem;
+      border-right: 2px solid $secondary;
+    }
+  }
+}

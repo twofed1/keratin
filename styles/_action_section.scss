@@ -1,0 +1,45 @@
+.call_to_action{
+  border-top: 1rem solid $secondary;
+  .title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.7rem;
+    padding: 2rem 0;
+    img{
+      margin-bottom: 1rem;
+    }
+    span{
+      text-align: center;
+    }
+  }  
+}
+
+.action{
+  &__logo{}
+  &__btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 4rem 2rem;
+    border-style: solid;
+    border-color: $secondary;
+    border-width: 2px 0;
+    background-color: transparent;
+    &:not(:last-child){
+      margin-bottom: 2rem;
+    }
+    &:nth-child(2n - 1){
+      flex-direction: row-reverse;
+      .action__text{
+        text-align: right;
+      }
+    }
+  }
+  &__text{
+    width: auto;
+    padding: 1rem 2rem;
+    text-align: left;
+  }
+}

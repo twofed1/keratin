@@ -1,0 +1,32 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.row{
+  display: flex;
+  margin: 0 -1rem;
+  width: 100%;
+}
+
+%col{
+  display: flex;
+  align-items: center;
+  flex-grow: 1;  
+}
+
+.col{
+  &-lg{
+    @extends %col;
+  }
+  &-md{
+    @extends %col;
+  }
+  &-sm{
+    @extends %col;
+  }
+}

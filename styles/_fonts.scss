@@ -1,0 +1,39 @@
+.heading{
+  color: $primary;
+  font-size: 3.6rem;
+  margin: 0;
+  font-family: 'Caveat', cursive;
+}
+
+.title{
+  font-family: inherit;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  color: $secondary;
+}
+
+.text{
+  &--xs{
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+  &--sm{
+    font-size: 1.4rem;
+  }
+  &--md{
+    font-size: 1.7rem;
+  }
+  &--lg{
+    font-size: 2.4rem;
+  }
+  
+  &--sec{
+    color: $secondary;
+  }
+  &--acc{
+    color: $accent;
+  }
+  &--grey{
+    color: $grey;
+  }
+}

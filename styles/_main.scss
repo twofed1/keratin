@@ -1,0 +1,55 @@
+html, body{
+  font-size: 10px;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: $dark;
+  line-height: 1.5;
+}
+
+.price{
+  font-weight: 600;
+  .sale{
+    margin-right: 2rem;
+    color: $secondary;
+    text-transform: uppercase;
+    text-decoration: line-through;
+  }
+}
+
+.desc{
+  padding: 0 3rem 3rem;
+  p{
+    margin: 0 0 2rem;
+  }
+  .title{
+    margin-right: 2rem;
+    padding: 0;
+  }
+}
+
+.section{
+  margin: 4rem 0;
+  >.title{
+    padding: 0 3rem;
+  }
+}
+
+.training__registration {
+  .price{
+    font-size: 2.4rem;
+  }
+  .desc{
+    text-align: center;
+  }
+  .heading{
+    text-align: left;
+  }
+}
+
