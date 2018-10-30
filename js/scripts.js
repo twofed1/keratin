@@ -56,12 +56,17 @@ $(document).ready(function() {
   tabInit('.tabs');
 })
 
-$('.dropdown__item').on('click', function(){
+$('.caret').on('click', function(){
   var parent = $(this).closest('.dropdown'),
-      items = parent.find();
+      items = parent.find('.dropdown__item');
+  
   parent.addClass('open');
+  
   items.on('click', function(){
+    items.removeClass('active');
     $(this).addClass('active');
+    
     parent.removeClass('open');
+    parent.find('.dropdown__list').append(items.sort(el => $(el).hasClass('active') ? -1 : 1));
   })
 })
