@@ -5,11 +5,14 @@ header{
   justify-content: space-between;
   align-items: center;
   height: 6rem;
-  padding: 0 1rem 0 3rem;
+  padding: 0 0 0 3rem;
   background-color: $light;
 }
 
 .logo{
+  height: auto;
+  display: flex;
+  align-items: center;
   margin-right: auto;
 }
 

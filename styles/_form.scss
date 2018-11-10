@@ -1,0 +1,28 @@
+input,
+
+input{
+  line-height: 4rem;
+  border: solid $grey;
+  border-width: 0 0 0.2rem;
+}
+
+label{
+  line-height: 2.2rem;
+  font-size: 1.7rem;  
+}
+
+textarea{
+  line-height: 4rem;
+  border: none;
+  height: auto;
+  background-color: #fff; 
+  background-image: linear-gradient(transparent 3.8rem, $grey 3.8rem);
+  background-size: 100% 4rem;
+  background-attachment: local;
+}
+
+.field{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4rem;
+}
