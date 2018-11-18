@@ -4,7 +4,12 @@
   justify-content: flex-start;
   align-items: stretch;
   width: 100%;
-  padding: 0 1rem;
+  padding: 0;
+  margin: auto;
+  @media screen and (min-width: 770px) {
+    max-width: 760px;
+    padding: 0 3rem;
+  }
 }
 
 .row{

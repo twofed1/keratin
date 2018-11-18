@@ -13,6 +13,21 @@ $(document).ready(function() {
     }      
   })
   
+  if(window.innerWidth > 770){
+    var cart = $('.menu').find('.cart'),
+        socials = $('.menu').find('.social__btn');
+    $('.menu__wrapper').prepend($(cart));
+    $('.menu__wrapper').append($(socials));
+    cart.html();
+    socials.html();
+  }
+  
+  $('.call_to_action').find('.title').html(
+    window.innerWidth > 770 
+      ? `<span>Стань частью содружества <img src="img/logo.png" alt="" class="action__logo">. Запишись сейчас!</span>`
+      : `<img src="img/logo.png" alt="" class="action__logo"><span>Стань частью содружества. <br/> Запишись сейчас!</span>`
+  )
+  
   
   /*dropdown*/
   $('.caret').on('click', function(){

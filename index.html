@@ -11,22 +11,24 @@
 
 <body>
   <header>
-    <a href="#" class="logo"><img src="img/logo.png" alt=""></div>
-      <a href="#" class="cart"><img src="img/icon_cart.png" alt=""></a>
+   <div class="container">
+    <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
+      <div class="menu">
+       <a href="#" class="cart"><img src="img/icon_cart.png" alt=""></a>
       <button class="menu__btn"> <span></span> <span></span> <span></span> </button>
+        <div class="ul menu__wrapper text--md">
+          <li class="menu__item"><a href="salons.html">салоны</a></li>
+          <li class="menu__item"><a href="masters.html">мастера</a></li>
+          <li class="menu__item"><a href="service.html">услуги</a></li>
+          <li class="menu__item"><a href="training.html">обучение</a></li>
+          <li class="menu__item"><a href="catalog.html">каталог</a></li>
+          <li class="menu__item"><a href="blog.html">блог</a> <img src="img/social_buttons.png" alt="" class='social__btn'></li>
+        </div>
+      </div>
+    </div>      
   </header>
-  <div class="menu">
-    <div class="ul menu__wrapper text--md">
-      <li class="menu__item"><a href="salons.html">салоны</a></li>
-      <li class="menu__item"><a href="masters.html">мастера</a></li>
-      <li class="menu__item"><a href="service.html">услуги</a></li>
-      <li class="menu__item"><a href="training.html">обучение</a></li>
-      <li class="menu__item"><a href="catalog.html">каталог</a></li>
-      <li class="menu__item"><a href="blog.html">блог</a> <img src="img/social_buttons.png" alt=""></li>
-    </div>
-  </div>
-  <div class="container">
-    <section class="slider">
+  
+    <section class="slider container">
       <div class="slide">
         <h2 class="heading">Бразильское выпрямление волос. Лучшее в стране.</h2> 
         <img src="img/slide.png" alt="Бразильское выпрямление волос" class="slide__img">
@@ -46,8 +48,8 @@
         </div>
       </div>
     </section>
-    <article class="description">KERATIN MAX - Великолепный дом с современными планировками и высокими потолками, рассчитанный на семью из 4-6 человек. Особенность первого этажа - большая кухня-столовая-гостиная с выходом на просторную террасу, а так же прачечная, где предусмотрено место для глажки, стирки и размещения вещей. Великолепный дом с современными планировками и высокими потолками, рассчитанный на семью из 4-6 человек. Особенность первого этажа - большая кухня-столовая-гостиная с выходом на просторную террасу, а так же прачечная, где предусмотрено место для глажки, стирки и размещения вещей. К дому прилегает парковка, рассчитанная на два автомобиля. На втором этаже располагаются  три спальни, разделенные гардеробными и рабочая зона в холле.</article>
-    <section class="salons">
+    <article class="description container">KERATIN MAX - Великолепный дом с современными планировками и высокими потолками, рассчитанный на семью из 4-6 человек. Особенность первого этажа - большая кухня-столовая-гостиная с выходом на просторную террасу, а так же прачечная, где предусмотрено место для глажки, стирки и размещения вещей. Великолепный дом с современными планировками и высокими потолками, рассчитанный на семью из 4-6 человек. Особенность первого этажа - большая кухня-столовая-гостиная с выходом на просторную террасу, а так же прачечная, где предусмотрено место для глажки, стирки и размещения вещей. К дому прилегает парковка, рассчитанная на два автомобиля. На втором этаже располагаются  три спальни, разделенные гардеробными и рабочая зона в холле.</article>
+    <section class="salons container">
       <h2 class="title">Наши салоны</h2>
       <p class="salons__desc text--sm">
         Великолепный дом с современными планировками и высокими потолками, рассчитанный на семью из 4-6 человек. Особенность первого этажа - большая кухня-столовая-гостиная с выходом на просторную террасу, а так же прачечная, где предусмотрено место для глажки, стирки и размещения вещей. Великолепный дом с современными планировками и высокими потолками, рассчитанный на семью из 4-6 человек. 
@@ -61,7 +63,7 @@
         <p class="location">Хабаровск<span class="address">улица Рихарда  Зорге, 17</span></p>
       </div>
     </section>
-    <section class="masters">
+    <section class="masters container">
       <h2 class="title">Наши мастера</h2>
       <p class="masters__desc text--sm">
        Великолепный дом с современными планировками и высокими потолками, рассчитанный на семью из 4-6 человек. Особенность первого этажа - большая кухня-столовая-гостиная с выходом на просторную террасу, а так же прачечная, где предусмотрено место для глажки, стирки и размещения вещей. Великолепный дом с современными планировками и высокими потолками, рассчитанный на семью из 4-6 человек. 
@@ -101,7 +103,7 @@
       </div>
       <a href="#" class="btn">показать всех</a>
     </section>
-    <section class="training">
+    <section class="training container">
       <h2 class="heading">
       Пройди обучение у лучших мастеров. <br/>
       Запишись сейчас
@@ -111,7 +113,7 @@
       </p>
       <a href="#" class="btn">узнать больше</a>
     </section>
-    <section class="catalog section">
+    <section class="catalog section container">
       <h2 class="title">
       Материалы для профессионалов 
      </h2>
@@ -136,21 +138,27 @@
       <a href="#" class="btn">показать все</a>
     </section>
     <section class="call_to_action">
+     <div class="container">
       <h2 class="title"><img src="img/logo.png" alt="" class="action__logo"><span>Стань частью содружества. <br/> Запишись сейчас!</span></h2>
       <button class="action__btn"><span class="heading action__text">Записаться на обучение</span><img src="img/icon_edu.png" alt=""></button>
       <button class="action__btn"><span class="heading action__text">Записаться на процедуру</span><img src="img/icon_service.png" alt=""></button>
+      </div>
     </section>
-  </div>
   <footer>
+   <div class='container'>
     <p class="copyright text--xs"> © 2018 KERATIN MAX.
       <br/>Использование материалов сайта разрешено только с согласия правообладателей.
       <br/>Все права защищены. </p>
     <div class="footer__socials"><img src="img/social_buttons.png" alt=""></div>
+    <div class="footer__links-wrapper">
     <div class="footer__links">
       <a href="#" class="footer__link"><img src="img/nadzorow.png" alt=""></a>
-      <a href="#" class="footer__link"><img src="img/twofed.png" alt=""></a></div>
+      <a href="#" class="footer__link"><img src="img/twofed.png" alt=""></a>
+      </div>
       <span>Дизайн и разработка сайта</span>
-  </footer>
+      </div>
+    </div>
+  </footer>  
   <script src="js/jquery.js"></script>
   <script src="js/scripts.js"></script>
 </body>

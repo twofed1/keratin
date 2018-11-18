@@ -1,98 +1,156 @@
-header{
-  position: relative;
-  z-index: 10;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 6rem;
-  padding: 0 0 0 3rem;
-  background-color: $light;
-}
-
-.logo{
-  height: auto;
-  display: flex;
-  align-items: center;
-  margin-right: auto;
-}
-
-.cart, .menu__btn{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 6rem;
-}
-
-.menu{
-  height: 100%;
-  &__wrapper{
-    position: absolute;
-    z-index: 8;
-    left: 0;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 8rem 3rem 2rem;
-    list-style: none;
-    background-color: $light;
-    color: $grey;
-    transform: translateY(-100%);
-    transition: $anim ease-in;
-    &.active{      
-      transform: translateY(0);
-    }
-  }
-  &__item{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 4rem;
-    width: 100%;
-    transition: $anim;
-    &:hover{
-      color: $secondary;
-    }
-    a{
-      color: inherit;
-      text-decoration: none;
-    }
-  }
-  &__btn{
+  header {
     position: relative;
     z-index: 10;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 6rem;
+    padding: 0;
+    background-color: $light;
+    @media screen and (min-width: 770px) {
+      flex-direction: column;
+      height: auto;
+      padding-top: 5rem;
+    }
+  }
+  
+  .logo {
+    height: auto;
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    position: absolute;
+    left: 30px;
+    top: auto;
+    z-index: 10;
+    @media screen and (min-width: 770px) {
+      position: static;
+      justify-content: center;
+      height: 6rem;
+      width: 100%;
+    }
+  }
+  
+  .cart,
+  .menu__btn {
+    display: flex;
     align-items: center;
     justify-content: center;
-    background-color: transparent;
-    border: none;
-    &:hover, &:focus, &:active{
-      outline: none;
+    height: 100%;
+    width: 6rem;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .menu {
+    height: 100%;
+    /* position: relative; */
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    @media screen and (min-width: 770px) {
+      height: 6rem;
     }
-    span{
-      display: block;
-      height: 2px;
-      width: 2rem;
-      background-color: $grey;
-      transition: $anim;
-      &:not(:last-child){
-        margin-bottom: 0.4rem;
+    &:after {
+      content: '';
+      position: absolute;
+      z-index: 9;
+      top: 0;
+      left: 0;
+      background-color: $light;
+      width: 100%;
+      height: 100%;
+      @media screen and (min-width: 770px) {
+        display: none;
       }
     }
-    &.active{
-      span{
-        &:first-child{
-          transform: translateY(6px) rotateZ(45deg);
+    &__wrapper {
+      position: absolute;
+      z-index: 8;
+      left: 0;
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 8rem 3rem 2rem;
+      list-style: none;
+      background-color: $light;
+      color: $grey;
+      transform: translateY(-100%);
+      transition: $anim ease-in;
+      @media screen and (min-width: 770px) {
+        position: static;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 3rem 0 1rem;
+        font-size: 1.4rem;
+        transform: translateY(0);
+      }
+      &.active {
+        transform: translateY(0);
+      }
+      .social__btn{
+        height: 2rem;
+      }
+    }
+    &__item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 4rem;
+      width: 100%;
+      transition: $anim;
+      @media screen and (min-width: 770px) {
+        width: auto;
+      }
+      &:hover {
+        color: $secondary;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+    &__btn {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+      border: none;
+      @media screen and (min-width: 770px) {
+        display: none;
+      }
+      &:hover,
+      &:focus,
+      &:active {
+        outline: none;
+      }
+      span {
+        display: block;
+        height: 2px;
+        width: 2rem;
+        background-color: $grey;
+        transition: $anim;
+        &:not(:last-child) {
+          margin-bottom: 0.4rem;
         }
-        &:nth-child(2){
-          transform: scale(0);
-        }
-        &:last-child{
-          transform: translateY(-6px) rotateZ(-45deg);
+      }
+      &.active {
+        span {
+          &:first-child {
+            transform: translateY(6px) rotateZ(45deg);
+          }
+          &:nth-child(2) {
+            transform: scale(0);
+          }
+          &:last-child {
+            transform: translateY(-6px) rotateZ(-45deg);
+          }
         }
       }
     }
   }
-}

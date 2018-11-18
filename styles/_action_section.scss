@@ -1,13 +1,31 @@
 .call_to_action{
   border-top: 1rem solid $secondary;
+  @media screen and (min-width: 770px) {
+    border-bottom: 1rem solid $secondary;   
+  }
+  .container{
+    @media screen and (min-width: 770px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding-bottom: 5rem; 
+    }
+  }
   .title{
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 1.7rem;
     padding: 2rem 0;
+    @media screen and (min-width: 770px) {
+      width: 100%;
+      margin: 0;
+      padding: 5rem 0;
+    }
     img{
       margin-bottom: 1rem;
+      @media screen and (min-width: 770px) {
+        margin: 0 0 -0.25rem 0.5rem;
+      }
     }
     span{
       text-align: center;
@@ -34,6 +52,29 @@
       flex-direction: row-reverse;
       .action__text{
         text-align: right;
+      }
+    }
+    @media screen and (min-width: 770px) {
+      width: calc(50% - 1rem);
+      border-width: 2px;
+      &:not(:last-child){
+        margin-bottom: 0;
+      }
+      &:last-child{
+        margin-bottom: 0;
+        margin-left: 2rem;
+      }
+      &:nth-child(2n - 1){
+        flex-direction: row;
+        .action__text{
+          text-align: left;
+        }
+      }
+      &:nth-child(2n){
+        flex-direction: row-reverse;
+        .action__text{
+          text-align: right;
+        }
       }
     }
   }
