@@ -83,9 +83,12 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        padding: 0 3rem 0 1rem;
+        padding: 0 1rem 0 0;
         font-size: 1.4rem;
         transform: translateY(0);
+      }      
+      @media screen and (min-width: 770px) {
+        font-size: 1.7rem;
       }
       &.active {
         transform: translateY(0);

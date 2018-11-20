@@ -7,8 +7,11 @@
   padding: 0;
   margin: auto;
   @media screen and (min-width: 770px) {
-    max-width: 760px;
-    padding: 0 3rem;
+    max-width: 770px;
+    padding: 0 2rem;
+  }
+  @media screen and (min-width: 770px) {
+    max-width: 1240px;
   }
 }
 

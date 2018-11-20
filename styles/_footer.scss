@@ -6,6 +6,17 @@ footer{
       flex-direction: row;
     }    
   }
+  .logo{
+    display: none;
+    @media screen and (min-width: 1100px) {
+      display: inline-flex;
+      width: auto;
+      margin-right: 6rem;
+    }
+  }
+  @media screen and (min-width: 770px) {
+    padding: 4rem 0;
+  }
 }
 
 .footer{
@@ -48,5 +59,10 @@ footer{
     br{
       display: none;
     }
+  }  
+  @media screen and (min-width: 1100px) {
+    display: flex;
+    align-items: center;
+    margin-right: 6rem;
   }
 }

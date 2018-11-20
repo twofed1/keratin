@@ -5,42 +5,107 @@
   .title{
     padding: 0 3rem;
     margin-bottom: 4rem;
+    @media screen and (min-width: 770px) {
+      padding: 0 2rem;
+    }
   }
   .btn{
     width: 18rem;
     margin: 4rem auto;
   }
+  .tab.active{
+    @media screen and (min-width: 600px) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
   &__desc{
     width: 100%;
     padding: 0 3rem;
     margin-bottom: 7rem;
+    @media screen and (min-width: 600px) {
+      padding: 0 2rem;
+    }
   }
   &__item{
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     &:not(:last-child){
       margin-bottom: 4rem;
     }
+    &:nth-child(2n) .masters__portrait:after {background-image: url(../img/blot2.png);}
+    &:nth-child(3n) .masters__portrait:after {background-image: url(../img/blot3.png);}
+    &:nth-child(4n) .masters__portrait:after {background-image: url(../img/blot4.png);}
+    
+    @media screen and (min-width: 600px) {
+      width: 50%;
+      &:last-child{
+        margin-bottom: 4rem;
+      }
+    }
+    @media screen and (min-width: 1100px) {
+      flex-direction: row;
+    }
   }
-  &__position{  
+  &__position{
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: 500;    
+    white-space: nowrap;
+    @media screen and (min-width: 1100px) {
+      white-space: normal;
+    }
   }
   &__name{
     display: flex;
     flex-direction: column;
-    width: 100%;
     padding: 0 6rem;
     margin-top: 2rem;
     font-size: 1.7rem;
     font-weight: 600;
-    color: $accent;
+    color: $accent;    
+    @media screen and (min-width: 600px) {
+      margin-top: 3rem;
+    }    
+    @media screen and (min-width: 1100px) {
+      padding: 0 0 0 2rem;
+    }
   }
   &__portrait{
-//    height: 30rem;
-    width: 100%;
-    background: url(../img/blot.png) no-repeat center;
-    background-size: contain;
+    position: relative;
+    height: 30rem;
+    width: auto;
+    img{
+      position: relative;
+      z-index: 2;
+      max-width: 100%;
+      max-height: 100%;
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url(../img/blot.png) no-repeat center;
+      background-size: contain;
+      opacity: 0;
+      transform: scale(0.95);
+      transition: $anim;
+    }
+    &:hover{
+      &:after{
+        opacity: 1;
+        transform: scale(1.3);
+      }
+    }
+    
+    @media screen and (min-width: 1100px) {
+      width: 275px;
+      height: auto;
+    }
   }
 }

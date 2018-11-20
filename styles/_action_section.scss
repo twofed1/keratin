@@ -3,13 +3,6 @@
   @media screen and (min-width: 770px) {
     border-bottom: 1rem solid $secondary;   
   }
-  .container{
-    @media screen and (min-width: 770px) {
-      flex-direction: row;
-      flex-wrap: wrap;
-      padding-bottom: 5rem; 
-    }
-  }
   .title{
     display: flex;
     flex-direction: column;
@@ -35,6 +28,16 @@
 
 .action{
   &__logo{}
+  &__wrapper{
+    @media screen and (min-width: 770px) {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-bottom: 5rem; 
+    }
+  }
   &__btn{
     display: flex;
     align-items: center;
@@ -45,10 +48,10 @@
     border-color: $secondary;
     border-width: 2px 0;
     background-color: transparent;
-    &:not(:last-child){
+    &:first-child{
       margin-bottom: 2rem;
     }
-    &:nth-child(2n - 1){
+    &:last-child{
       flex-direction: row-reverse;
       .action__text{
         text-align: right;
@@ -57,24 +60,18 @@
     @media screen and (min-width: 770px) {
       width: calc(50% - 1rem);
       border-width: 2px;
-      &:not(:last-child){
-        margin-bottom: 0;
-      }
-      &:last-child{
-        margin-bottom: 0;
-        margin-left: 2rem;
-      }
-      &:nth-child(2n - 1){
-        flex-direction: row;
-        .action__text{
-          text-align: left;
-        }
-      }
-      &:nth-child(2n){
+      margin: 0 !important;
+      &:first-child{
         flex-direction: row-reverse;
         .action__text{
           text-align: right;
-        }
+        }        
+      }
+      &:last-child{ 
+        flex-direction: row;
+        .action__text{
+          text-align: left;
+        }       
       }
     }
   }
@@ -83,5 +80,9 @@
     padding: 1rem 2rem;
     text-align: left;
     line-height: 1;
+    @media screen and (min-width: 1100px) {
+      font-size: 4.6rem;
+      padding: 0 9rem;
+    }
   }
 }
