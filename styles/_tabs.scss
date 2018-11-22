@@ -19,7 +19,7 @@
     &.open{
       height: fit-content;
     }
-    @media screen and (min-width: 770px) {
+    @media screen and (min-width: 600px) {
       position: static;
       display: flex;
       border-bottom: 2px solid $grey;
@@ -66,7 +66,7 @@
     img{
       margin-right: 2rem;
     }
-    @media screen and (min-width: 770px) {
+    @media screen and (min-width: 600px) {
       position: relative;
       color: $grey;
       font-size: 2.6rem;

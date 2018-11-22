@@ -33,6 +33,9 @@ body{
     margin-right: 2rem;
     padding: 0;
   }
+  @media screen and (min-width: 600px) {
+    padding: 0 2rem 3rem;
+  }    
 }
 
 .section{

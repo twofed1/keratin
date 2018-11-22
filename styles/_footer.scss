@@ -2,7 +2,7 @@ footer{
   padding: 4rem 3rem 5rem;
   color: $grey_text;
   .container{
-    @media screen and (min-width: 770px) {
+    @media screen and (min-width: 600px) {
       flex-direction: row;
     }    
   }
@@ -14,7 +14,7 @@ footer{
       margin-right: 6rem;
     }
   }
-  @media screen and (min-width: 770px) {
+  @media screen and (min-width: 600px) {
     padding: 4rem 0;
   }
 }
@@ -22,7 +22,7 @@ footer{
 .footer{
   &__socials{
     margin: 2rem 0;
-    @media screen and (min-width: 770px) {
+    @media screen and (min-width: 600px) {
       display: flex;
       align-items: center;
       margin: 0 6rem;
@@ -38,7 +38,7 @@ footer{
       align-items: flex-end;
       justify-content: center;
     }    
-    @media screen and (min-width: 770px) {
+    @media screen and (min-width: 600px) {
       margin: 0;
     }
   }
@@ -52,7 +52,7 @@ footer{
 }
 
 .copyright{
-  @media screen and (min-width: 770px) {
+  @media screen and (min-width: 600px) {
     margin: 0;
     font-size: 1rem;
     line-height: 1.2rem;
