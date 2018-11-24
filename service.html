@@ -11,20 +11,23 @@
 
 <body>
   <header>
-    <a href="#" class="logo"><img src="img/logo.png" alt=""></div>
-      <a href="#" class="cart"><img src="img/icon_cart.png" alt=""></a>
+   <div class="container">
+    <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
+      <div class="menu">
+       <a href="#" class="cart"><img src="img/icon_cart.png" alt=""></a>
       <button class="menu__btn"> <span></span> <span></span> <span></span> </button>
+        <div class="ul menu__wrapper text--md">
+          <li class="menu__item"><a href="salons.html">салоны</a></li>
+          <li class="menu__item"><a href="masters.html">мастера</a></li>
+          <li class="menu__item"><a href="service.html">услуги</a></li>
+          <li class="menu__item"><a href="training.html">обучение</a></li>
+          <li class="menu__item"><a href="catalog.html">каталог</a></li>
+          <li class="menu__item"><a href="blog.html">блог</a> <img src="img/social_buttons.png" alt="" class='social__btn'></li>
+        </div>
+      </div>
+    </div>      
   </header>
-  <div class="menu">
-    <div class="ul menu__wrapper text--md">
-      <li class="menu__item"><a href="salons.html">салоны</a></li>
-      <li class="menu__item"><a href="masters.html">мастера</a></li>
-      <li class="menu__item"><a href="service.html">услуги</a></li>
-      <li class="menu__item"><a href="training.html">обучение</a></li>
-      <li class="menu__item"><a href="catalog.html">каталог</a></li>
-      <li class="menu__item"><a href="blog.html">блог</a> <img src="img/social_buttons.png" alt=""></li>
-    </div>
-  </div>
+  
   <div class="container">
     <section class="masters">
       <h2 class="title">Наши услуги</h2>
@@ -32,52 +35,72 @@
       <div class="tabs">
         <div class="tabs__list">
           <ul class="tabs__header">
-            <li class="tabs__btn active" data-type="vlad"><img src="img/emblem_vlad.png" alt="">Владивосток</li>
-            <li class="tabs__btn" data-type="hab"><img src="img/emblem_hab.png" alt="">Хабаровск</li>
+            <li class="tabs__btn active" data-type="vlad">
+              <img src="img/emblem_vlad.png" alt="">
+              Владивосток
+            </li>
+            <li class="tabs__btn" data-type="hab">
+              <img src="img/emblem_hab.png" alt="">
+              Хабаровск
+            </li>
+            <li class="tabs__btn" data-type="blag">
+              <img src="img/emblem_vlad.png" alt="">
+              Благовещенск
+            </li>
+            <li class="tabs__btn" data-type="moscow">
+              <img src="img/emblem_hab.png" alt="">
+              Москва
+            </li>
           </ul>
         </div>
         <div class="tabs__content">
           <div class="tab active" data-type="vlad">
             <div class="service__item">
-              <img src="img/service3.png" alt="" class="service__cover">
+              <span class="service__cover"><img src="img/service3.png" alt=""></span>
               <div class="service__desc">
                 <p class="service__title text--md">Выпрямление с помощью священного прекрасного малого фиолетового осьминога</p>
                 <div class="service__text text--sm">Великолепный дом с современными планировками и высокими потолками, рассчитанный на семью из 4-6 человек. Особенность первого этажа - большая кухня-столовая-гостиная с выходом на просторную террасу, а так же прачечная, где предусмотрено место для глажки, стирки и размещения вещей. Великолепный дом с современными планировками.</div>
-                <p class="service__price text--md">
+                <div class="service__control">
+                 <p class="service__price text--md">
                   Стоимость:
                 <span class="price">
                 <span class="sale">9 600 р</span>4 900 р
                 </span>
                 </p>
                 <a href="#" class="btn">записаться</a>
+                </div>
               </div>
             </div>
             <div class="service__item">
-              <img src="img/service2.png" alt="" class="service__cover">
+              <span class="service__cover"><img src="img/service2.png" alt=""></span>
               <div class="service__desc">
                 <p class="service__title text--md">Выпрямление с помощью священного прекрасного малого фиолетового осьминога</p>
                 <div class="service__text text--sm">Великолепный дом с современными планировками и высокими потолками, рассчитанный на семью из 4-6 человек. Особенность первого этажа - большая кухня-столовая-гостиная с выходом на просторную террасу, а так же прачечная, где предусмотрено место для глажки, стирки и размещения вещей. Великолепный дом с современными планировками.</div>
-                <p class="service__price text--md">
+                <div class="service__control">
+                 <p class="service__price text--md">
                   Стоимость:
                 <span class="price">
                 <span class="sale">9 600 р</span>4 900 р
                 </span>
                 </p>
                 <a href="#" class="btn">записаться</a>
+                </div>
               </div>
             </div>
             <div class="service__item">
-              <img src="img/service1.png" alt="" class="service__cover">
+              <span class="service__cover"><img src="img/service1.png" alt=""></span>
               <div class="service__desc">
                 <p class="service__title text--md">Выпрямление с помощью священного прекрасного малого фиолетового осьминога</p>
                 <div class="service__text text--sm">Великолепный дом с современными планировками и высокими потолками, рассчитанный на семью из 4-6 человек. Особенность первого этажа - большая кухня-столовая-гостиная с выходом на просторную террасу, а так же прачечная, где предусмотрено место для глажки, стирки и размещения вещей. Великолепный дом с современными планировками.</div>
-                <p class="service__price text--md">
+                <div class="service__control">
+                 <p class="service__price text--md">
                   Стоимость:
                 <span class="price">
                 <span class="sale">9 600 р</span>4 900 р
                 </span>
                 </p>
                 <a href="#" class="btn">записаться</a>
+                </div>
               </div>
             </div>
           </div>
@@ -127,22 +150,32 @@
           </div>
         </div>
       </div>
-    </section>
-    <section class="call_to_action">
-      <h2 class="title"><img src="img/logo.png" alt="" class="action__logo"><span>Стань частью содружества. <br/> Запишись сейчас!</span></h2>
-      <button class="action__btn"><span class="heading action__text">Записаться на обучение</span><img src="img/icon_edu.png" alt=""></button>
-      <button class="action__btn"><span class="heading action__text">Записаться на процедуру</span><img src="img/icon_service.png" alt=""></button>
-    </section>
+    </section>    
   </div>
+    <section class="call_to_action">
+     <div class="container">
+      <h2 class="title"><img src="img/logo.png" alt="" class="action__logo"><span>Стань частью содружества. <br/> Запишись сейчас!</span></h2>
+      <div class="action__wrapper"><button class="action__btn"><span class="heading action__text">Записаться на обучение</span><img src="img/icon_edu.png" alt=""></button>
+      <button class="action__btn"><span class="heading action__text">Записаться на процедуру</span><img src="img/icon_service.png" alt=""></button>
+      </div>
+      </div>
+    </section>
   <footer>
+   <div class='container'>
+     <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
     <p class="copyright text--xs"> © 2018 KERATIN MAX.
       <br/>Использование материалов сайта разрешено только с согласия правообладателей.
       <br/>Все права защищены. </p>
     <div class="footer__socials"><img src="img/social_buttons.png" alt=""></div>
+    <div class="footer__links-wrapper">
     <div class="footer__links">
       <a href="#" class="footer__link"><img src="img/nadzorow.png" alt=""></a>
       <a href="#" class="footer__link"><img src="img/twofed.png" alt=""></a>
-    </div> <span>Дизайн и разработка сайта</span> </footer>
+      </div>
+      <span>Дизайн и разработка сайта</span>
+      </div>
+    </div>
+  </footer>
   <script src="js/jquery.js"></script>
   <script src="js/scripts.js"></script>
 </body>

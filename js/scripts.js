@@ -52,9 +52,11 @@ $(document).ready(function() {
   
   /*tab function*/
   function tabInit(parent){
-    var header = $(parent).find('.tabs__header'),
+    var closest  = $(parent).closest('.tabs'),
+        header = $(parent).find('.tabs__header'),
         titles = header.find('.tabs__btn'),
-        content = $(parent).find('.tabs__content').find('.tab');
+        content = $(parent).find('.tabs__content').find('.tab'),
+        sum = Array.from($(titles)).reduce((ac,el) => ac += $(el).width(), 0);
     
     $(titles).on('click', function(){
       content.removeClass('active');
@@ -69,15 +71,16 @@ $(document).ready(function() {
       $(activeTab).addClass('active');
       $(this).addClass('active');
       
-      if(window.innerWidth < 770){        
+      if(header.width() < sum){        
         header.removeClass('open');
         header.append(titles.sort(el => $(el).hasClass('active') ? -1 : 1)); 
       }
       
-    }) 
+    })
     
-    if(window.innerWidth < 770){
-      header.append('<button class="tabs__dropdown"><span></span></button>')
+    if(header.width() < sum){
+      header.append('<button class="tabs__dropdown"><span></span></button>');
+      closest.addClass('mobile');
       $(parent).on('click', '.tabs__dropdown', function(){
         var tabsHeader = $(this).parent('.tabs__header');
 

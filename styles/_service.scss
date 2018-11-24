@@ -1,6 +1,25 @@
 .service{
   &__cover{
+    display: block;
     width: 100%;
+    @media screen and (min-width: 600px) {
+      height: 40rem;
+      position: relative;
+      overflow: hidden;
+    }
+    @media screen and (min-width: 1000px) {
+      height: 64rem;
+    }
+    img{
+      width: 100%;
+      @media screen and (min-width: 600px) {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
   }
   &__desc{
     padding: 4rem 3rem 7rem;
@@ -12,10 +31,34 @@
   &__text{
     margin-bottom: 4rem;
   }
+  &__control{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @media screen and (min-width: 600px) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .btn{
+      margin: 4rem 0;
+      @media screen and (min-width: 600px) {
+        margin: 0;
+      }
+    }
+  }
   &__price{
     display: flex;
     flex-direction: column;
     margin: 0 0 2rem;
+    @media screen and (min-width: 770px) {
+      align-items: center;
+      flex-direction: row;
+      margin: 0;
+      .sale{
+        margin: 0 1rem;
+      }
+    }
   }
   .btn{
     margin: 0;
