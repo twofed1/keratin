@@ -20,6 +20,10 @@ $(document).ready(function() {
     $('.menu__wrapper').append($(socials));
     cart.html();
     socials.html();
+    
+    
+    var productHeader = $('.product__header');
+    $('.product__section.catalog__slider').find('.desc').prepend(productHeader);
   }
   
   $('.call_to_action').find('.title').html(
@@ -57,6 +61,11 @@ $(document).ready(function() {
         titles = header.find('.tabs__btn'),
         content = $(parent).find('.tabs__content').find('.tab'),
         sum = Array.from($(titles)).reduce((ac,el) => ac += $(el).width(), 0);
+    
+    if(!titles.hasClass('active') ){
+      $(titles[0]).addClass('active');
+      $(content[0]).addClass('active');
+    }
     
     $(titles).on('click', function(){
       content.removeClass('active');

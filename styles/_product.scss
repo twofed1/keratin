@@ -10,6 +10,9 @@
     }
     .dropdown{
       margin-bottom: 5rem;
+      @media screen and (min-width: 700px) { 
+        display: none;
+      }
     }    
     .dropdown__item{
       &.active{
@@ -25,23 +28,67 @@
       display: inline-flex;
       margin-left: auto;
       padding: 0 3rem;
+      
+    }
+    .slide__img{
+      width: 80%;
+    }
+    &.catalog__slider{
+      @media screen and (min-width: 700px) {  
+        background-image: url(../img/blot_product.png);
+        .desc{
+          position: absolute;
+          top: 50%;
+          left: 40%;
+          width: 50%;
+          transform: translate3d(0, -50%, 0);
+          padding: 0;
+        }
+        .price__wrapper{
+          display: flex;
+          align-items: center;
+          width: 100%;
+          .price{
+            margin: 0;
+          }
+          .btn{
+            margin-left: auto;
+          }
+        }
+      }
     }
   }
   &__control{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-bottom: 4rem;
+    justify-content: space-between;    
+    @media screen and (min-width: 700px) { 
+      justify-content: flex-start;
+    }
+    margin-bottom: 4rem;    
   }
+  &__header{
+    margin-bottom: 4rem;
+    p{
+      padding: 0 3rem;
+    }
+    @media screen and (min-width: 700px) {
+      .heading, p{
+        padding: 0;
+      }
+    }
+  }  
 }
 
 .stock{
   position: relative;
   display: block;
   font-size: 1.2rem;
+  line-height: 1;
   font-family: 'Montserrat', sans-serif;
   color: $success;
   padding-left: 2rem;
+  margin: 1rem 0;
   &:before{
     content: '';
     position: absolute;
@@ -57,6 +104,9 @@
   align-items: center;
   color: $secondary;
   font-size: 3.6rem;
+  @media screen and (min-width: 700px) { 
+    margin-right: 3rem;
+  }
   &__btn{
     display: flex;
     align-items: center;
@@ -89,9 +139,39 @@
     padding: 0.5rem 1rem;
     border: 2px solid transparent;
     transition: $anim;
+    @media screen and (min-width: 700px) { 
+      margin-right: 3rem;
+    }
     &.active{
       border-color: $primary;
       color: $primary;
+    }
+  }
+}
+
+.breadcrumbs{
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0 4rem;
+  &__item{    
+    padding-right: 2rem;
+    margin: 0 !important;
+    border-right: 2px solid $secondary;
+    height: 3rem;
+    font-size: 1.4rem;
+    line-height: 3rem;
+    color: $grey;
+    &.heading{
+      font-size: 3.4rem;
+      line-height: 2rem;
+      padding-left: 0;
+    }
+    &:not(:first-child){
+      padding-left: 2rem;
+    }
+    &:last-child{
+      color: $secondary;
     }
   }
 }

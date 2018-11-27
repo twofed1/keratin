@@ -2,6 +2,14 @@
   display: flex;
   flex-direction: column;
   padding: 10rem 0 0;
+  @media screen and (min-width: 700px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    .dropdown{
+      display: none;
+    }
+  }
   .title, .heading{
     padding: 0 3rem 4rem;
   }
@@ -10,6 +18,7 @@
   }
   .show-more{
     display: flex;
+    width: 100%;
     margin-bottom: 10rem;
     border-top: 2px solid $grey;
     .btn{
@@ -22,12 +31,66 @@
   }
   &__slider{
     width: 100%;
+    @media screen and (min-width: 700px) {
+      background-image: url(../img/blot_slider.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      .desc{
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        width: 50%;
+        transform: translate3d(0, -50%, 0);
+        padding: 0;
+      }
+      .price__wrapper{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        .price{
+          margin: 0;
+        }
+        .btn{
+          margin-left: auto;
+        }
+      }
+    }
+    .slide{
+      margin-bottom: 3rem;
+      max-width: 1200px;
+      margin: auto;
+      @media screen and (min-width: 700px) {
+        padding: 0 8rem;        
+      }
+    }
+    .slide__img{
+      width: 80%;
+      @media screen and (min-width: 700px) {
+        max-width: 30%; 
+        width: auto;
+        max-height: 50rem;
+      }
+    }    
+  }
+  &__items{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    width: 100%;
+    @media screen and (min-width: 1000px) {
+      width: 75%;
+    }
   }
   &__item{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 7rem;
+    text-decoration: none;
+    color: $dark_text;
+    @media screen and (min-width: 700px) {
+      width: 33%;
+    }
   }
   &__img{
 //    height: 40rem;
@@ -54,5 +117,48 @@
     .price{
       font-weight: 600;
     }
+  }
+  &__filter{
+    display: none;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 7rem;
+    @media screen and (min-width: 700px) {
+    display: flex;
+    }
+    @media screen and (min-width: 1000px) {
+      width: 25%;
+    }
+  }
+}
+
+.filter__item{
+  display: inline-block;
+  height: 4rem;
+  width: 33%;
+  background-color: transparent;
+  padding: 0 2rem;
+  margin: 0 0 1rem;
+  text-align: left;  
+  line-height: 1;
+  font-size: 1.4rem;
+  border: none;
+  color: $grey;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;  
+  @media screen and (min-width: 1000px) {
+    width: 100%;
+  }
+  &.heading{
+    font-family: 'Caveat', cursive;
+    font-size: 3.4rem;
+    font-weight: normal;
+    padding: 0 2rem;
+    color: $secondary;
+  }
+  &:focus,
+  &.active{
+    outline: none;
+    color: $secondary;
   }
 }

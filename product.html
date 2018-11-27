@@ -11,20 +11,22 @@
 
 <body>
   <header>
-    <a href="#" class="logo"><img src="img/logo.png" alt=""></div>
-      <a href="#" class="cart"><img src="img/icon_cart.png" alt=""></a>
-      <button class="menu__btn"> <span></span> <span></span> <span></span> </button>
-  </header>
-  <div class="menu">
-    <div class="ul menu__wrapper text--md">
-      <li class="menu__item"><a href="salons.html">салоны</a></li>
-      <li class="menu__item"><a href="masters.html">мастера</a></li>
-      <li class="menu__item"><a href="service.html">услуги</a></li>
-      <li class="menu__item"><a href="training.html">обучение</a></li>
-      <li class="menu__item"><a href="catalog.html">каталог</a></li>
-      <li class="menu__item"><a href="blog.html">блог</a> <img src="img/social_buttons.png" alt=""></li>
+    <div class="container">
+      <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
+      <div class="menu">
+        <a href="#" class="cart"><img src="img/icon_cart.png" alt=""></a>
+        <button class="menu__btn"> <span></span> <span></span> <span></span> </button>
+        <div class="ul menu__wrapper text--md">
+          <li class="menu__item"><a href="salons.html">салоны</a></li>
+          <li class="menu__item"><a href="masters.html">мастера</a></li>
+          <li class="menu__item"><a href="service.html">услуги</a></li>
+          <li class="menu__item"><a href="training.html">обучение</a></li>
+          <li class="menu__item"><a href="catalog.html">каталог</a></li>
+          <li class="menu__item"><a href="blog.html">блог</a> <img src="img/social_buttons.png" alt="" class='social__btn'></li>
+        </div>
+      </div>
     </div>
-  </div>
+  </header>
   <div class="container">
     <section class="section product__section">
       <div class="dropdown">
@@ -40,19 +42,25 @@
           <li class="dropdown__item">Окрашивание и тонирование</li>
         </ul>
       </div>
-      <h2 class="heading">Perfect Blonder <span class="stock">в наличии</span></h2>
-      <p class="desc">Новейший протектор для волос с активными питательтельными маслами</p>
-      <div class="slider">
-        <div class="slide">          
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs__item heading">Вся продукция</li>
+        <li class="breadcrumbs__item">Линия восстановления</li>
+        <li class="breadcrumbs__item">Perfect Blonder</li>
+      </ul>
+      <div class="product__header">
+        <h2 class="heading">Perfect Blonder <span class="stock">в наличии</span></h2>
+        <p>Новейший протектор для волос с активными питательтельными маслами</p>
+      </div>
+    </section>
+  </div>
+      <section class="slider product__section catalog__slider">
+        <div class="slide">
           <div class="slide__control">
             <button class="slide__btn prev"><span></span></button>
             <button class="slide__btn next"><span></span></button>
-          </div> 
-          <img src="img/product1.png" alt="" class="slide__img"> 
-          <div class="slide__pagination"><span></span> <span></span> <span></span> <span></span></div>
-        </div>
-      </div>
-      <div class="desc">
+          </div> <img src="img/product1.png" alt="" class="slide__img"> 
+          <div class="slide__pagination"><span></span> <span></span> <span></span> <span></span></div> </div>
+        <div class="desc">
         <div class="product__control">
           <div class="counter">
             <button class="counter__btn ded">-</button> <span class="count">2</span>
@@ -63,26 +71,50 @@
           <span class="volume__item">400 мл</span> 
           </div>
         </div>
-        <p class="price text--sec text--lg">2 100 р</p> <a href="#" class="btn">в корзину</a> </div>
+        <div class="price__wrapper"><p class="price text--sec text--lg">2 100 р</p> <a href="#" class="btn">в корзину</a> </div></div>
+    </section>
+    <div class="container">
+    <section class="section product__section">
       <div class="desc text--xs">
         <p>Не следует, однако забывать, что рамки и место обучения кадров в значительной степени обуславливает создание системы обучения кадров, соответствует насущным потребностям. Укрепление и развитие структуры позволяет выполнять важные задания по разработке системы обучения кадров, соответствует насущным потребностям. Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. </p>
         <p> С другой стороны новая модель организационной деятельности способствует подготовки и реализации новых предложений. С другой стороны начало повседневной работы по формированию позиции способствует подготовки и реализации модели развития. Не следует, однако забывать, что рамки и место обучения кадров в значительной степени обуславливает создание системы обучения кадров, соответствует насущным потребностям. </p>
       </div>
     </section>
-    <section class="review">
-      <h2 class="heading">
-        Отзывы о продукте
-      </h2>
-      <div class="desc">
-        <div class="review__item text--sm">
-          <p class="review__text">«Все очень хорошо! Отличный продукт! Рекомендую»</p> <span class="review__author text--sec">Мария Симонова</span> </div>
-        <div class="review__item text--sm">
-          <p class="review__text">«Все очень хорошо! Отличный продукт! Рекомендую»</p> <span class="review__author text--sec">Мария Симонова</span> </div>
-        <div class="review__item text--sm">
-          <p class="review__text">«Все очень хорошо! Отличный продукт! Рекомендую»</p> <span class="review__author text--sec">Мария Симонова</span> </div>
-        <div class="review__item text--sm">
-          <p class="review__text">«Все очень хорошо! Отличный продукт! Рекомендую»</p> <span class="review__author text--sec">Мария Симонова</span> </div>
+    <section class="review product__tabs">
+     <div class="tabs">
+        <div class="tabs__list">
+          <ul class="tabs__header">
+            <li class="tabs__btn" data-type="desc">
+              Описание продукта
+            </li>
+            <li class="tabs__btn" data-type="review">
+              Отзывы о продукте
+            </li>
+          </ul>
+        </div>
+        <div class="tabs__content">
+       <div class="tab" data-type="desc">
+          <div class="desc text--xs">
+            <p>Не следует, однако забывать, что рамки и место обучения кадров в значительной степени обуславливает создание системы обучения кадров, соответствует насущным потребностям. Укрепление и развитие структуры позволяет выполнять важные задания по разработке системы обучения кадров, соответствует насущным потребностям. Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. </p>
+            <p> С другой стороны новая модель организационной деятельности способствует подготовки и реализации новых предложений. С другой стороны начало повседневной работы по формированию позиции способствует подготовки и реализации модели развития. Не следует, однако забывать, что рамки и место обучения кадров в значительной степени обуславливает создание системы обучения кадров, соответствует насущным потребностям. </p>
+          </div>
+        </div>
+        <div class="tab" data-type="review">
+          <div class="desc">
+            <div class="review__item text--sm">
+              <p class="review__text">«Все очень хорошо! Отличный продукт! Рекомендую»</p> <span class="review__author text--sec">Мария Симонова</span> </div>
+            <div class="review__item text--sm">
+              <p class="review__text">«Все очень хорошо! Отличный продукт! Рекомендую»</p> <span class="review__author text--sec">Мария Симонова</span> </div>
+            <div class="review__item text--sm">
+              <p class="review__text">«Все очень хорошо! Отличный продукт! Рекомендую»</p> <span class="review__author text--sec">Мария Симонова</span> </div>
+            <div class="review__item text--sm">
+              <p class="review__text">«Все очень хорошо! Отличный продукт! Рекомендую»</p> <span class="review__author text--sec">Мария Симонова</span> </div>
+          </div>
+        </div>
       </div>
+      </div>
+      
+      
       <form action="" class="review__form">
        <div class="field">
          <label for="">
@@ -119,21 +151,30 @@
             восстановления волос</span> <span class="price text--md">1200 ₽</span> </p>
         </div>
       </div> <a href="#" class="btn">показать все</a> </section>
-    <section class="call_to_action">
-      <h2 class="title"><img src="img/logo.png" alt="" class="action__logo"><span>Стань частью содружества. <br/> Запишись сейчас!</span></h2>
-      <button class="action__btn"><span class="heading action__text">Записаться на обучение</span><img src="img/icon_edu.png" alt=""></button>
-      <button class="action__btn"><span class="heading action__text">Записаться на процедуру</span><img src="img/icon_service.png" alt=""></button>
-    </section>
   </div>
+  <section class="call_to_action">
+    <div class="container">
+      <h2 class="title"><img src="img/logo.png" alt="" class="action__logo"><span>Стань частью содружества. <br/> Запишись сейчас!</span></h2>
+      <div class="action__wrapper">
+        <button class="action__btn"><span class="heading action__text">Записаться на обучение</span><img src="img/icon_edu.png" alt=""></button>
+        <button class="action__btn"><span class="heading action__text">Записаться на процедуру</span><img src="img/icon_service.png" alt=""></button>
+      </div>
+    </div>
+  </section>
   <footer>
-    <p class="copyright text--xs"> © 2018 KERATIN MAX.
-      <br/>Использование материалов сайта разрешено только с согласия правообладателей.
-      <br/>Все права защищены. </p>
-    <div class="footer__socials"><img src="img/social_buttons.png" alt=""></div>
-    <div class="footer__links">
-      <a href="#" class="footer__link"><img src="img/nadzorow.png" alt=""></a>
-      <a href="#" class="footer__link"><img src="img/twofed.png" alt=""></a>
-    </div> <span>Дизайн и разработка сайта</span> </footer>
+    <div class='container'>
+      <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
+      <p class="copyright text--xs"> © 2018 KERATIN MAX.
+        <br/>Использование материалов сайта разрешено только с согласия правообладателей.
+        <br/>Все права защищены. </p>
+      <div class="footer__socials"><img src="img/social_buttons.png" alt=""></div>
+      <div class="footer__links-wrapper">
+        <div class="footer__links">
+          <a href="#" class="footer__link"><img src="img/nadzorow.png" alt=""></a>
+          <a href="#" class="footer__link"><img src="img/twofed.png" alt=""></a>
+        </div> <span>Дизайн и разработка сайта</span> </div>
+    </div>
+  </footer>
   <script src="js/jquery.js"></script>
   <script src="js/scripts.js"></script>
 </body>
