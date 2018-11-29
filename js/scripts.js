@@ -36,7 +36,7 @@ $(document).ready(function() {
   /*dropdown*/
   $('.caret').on('click', function(){
     var parent = $(this).closest('.dropdown'),
-        items = parent.find('.dropdown__item');
+        items = parent.find('.dropdown__item').map((index,el) => ({...el, id: index}));
 
     if(parent.hasClass('open')){
       return parent.removeClass('open');
@@ -44,12 +44,17 @@ $(document).ready(function() {
     
     parent.addClass('open');
 
+    console.log(items);
+    
     items.on('click', function(){
       items.removeClass('active');
       $(this).addClass('active');
 
       parent.removeClass('open');
-      parent.find('.dropdown__list').append(items.sort(el => $(el).hasClass('active') ? -1 : 1));
+      parent.find('.dropdown__list').append(
+        items
+          .sort((a,b) => a.id - b.id)
+          .sort(el => $(el).hasClass('active') ? -1 : 1));
     })
   });
   
@@ -104,22 +109,23 @@ $(document).ready(function() {
   /*init tabs*/
   tabInit('.tabs');
   
-  
   /*counter*/
-  var add = $('.counter').find('.add'),
-      ded = $('.counter').find('.ded'),
-      count = $('.counter').find('.count')[0],
-      value = Number($('.counter').find('.count')[0].innerText);
-  
-  add.on('click', function(){
-    value = value + 1;
-    $(count).text(value);
-  })
-  
-  ded.on('click', function(){    
-    value = value > 0 ?  value - 1 : 0;
-    $(count).text(value);
-  })
+  if($('.counter')){    
+    var add = $('.counter').find('.add'),
+        ded = $('.counter').find('.ded'),
+        count = $('.counter').find('.count')[0],
+        value = Number($('.counter').find('.count')[0].innerText);
+
+    add.on('click', function(){
+      value = value + 1;
+      $(count).text(value);
+    })
+
+    ded.on('click', function(){    
+      value = value > 0 ?  value - 1 : 0;
+      $(count).text(value);
+    })
+  }
   
   
   /*volume change*/

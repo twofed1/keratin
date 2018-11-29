@@ -43,4 +43,102 @@
       white-space: nowrap;
     }
   }
+  
+  &__slider{
+    margin-bottom: 10rem;
+    @media screen and (min-width: 770px) {
+      .tabs{
+        margin-top: 4rem;
+      }
+    }
+    .tabs.mobile .tabs__header{
+      border-bottom: 0;
+    }
+    .slider{
+      margin-bottom: 3rem;      
+    }
+    .slide{
+      &__desc{
+        padding-bottom: 0;
+        @media screen and (min-width: 770px) {
+          display: flex;
+          align-items: center;
+          flex-direction: row-reverse;
+          justify-content: space-between;
+          padding: 3rem 0 0;
+        }
+      }
+      &__pagination{        
+        @media screen and (min-width: 770px) {
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+  &__map{
+    width: calc(100% + 6rem);
+    margin: 4rem -3rem 0;
+    img{
+      width: 100%;
+    }
+    @media screen and (min-width: 770px) {
+      position: relative;
+      max-width: 400px;
+      height: 360px;
+      margin: 0;
+      flex: 1;
+      overflow: hidden;
+      img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    @media screen and (min-width: 1000px) {
+      max-width: 50%;
+    }
+  }
+  &__service{
+    margin-bottom: 10rem !important;
+    border-bottom: 2px solid $grey;
+    >.btn{
+      margin: 0 auto -4rem;
+      border-color: $grey;
+    }
+  }
+  &__contacts{
+    padding: 0;
+    margin: 0 0 4rem;
+    list-style: none; 
+    @media screen and (min-width: 770px) {
+      padding-right: 3rem;
+    }
+    @media screen and (min-width: 1000px) {
+      flex: 1;
+      padding: 3rem;
+    }
+    &-item{
+      display: block;
+      line-height: 3rem;
+      span{
+        margin-right: 1rem;
+      }
+    }
+    .heading{
+      display: none;
+      @media screen and (min-width: 770px) {
+        display: flex;
+        padding: 2rem 0;
+        color: $secondary;
+        font-weight: normal;
+        img{
+          margin-right: 2rem;
+        }
+      }
+    }
+    .btn{
+      margin-top: 2rem;
+    }
+  }
 }
