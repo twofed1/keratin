@@ -109,4 +109,14 @@
       height: auto;
     }
   }
+  &--home{
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 10rem;
+    border-bottom: 2px solid $grey;
+    .btn{
+      margin: 0 auto -4rem;
+      border-color: $grey;
+    }
+  }
 }

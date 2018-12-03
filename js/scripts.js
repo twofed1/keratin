@@ -43,8 +43,6 @@ $(document).ready(function() {
     }
     
     parent.addClass('open');
-
-    console.log(items);
     
     items.on('click', function(){
       items.removeClass('active');
@@ -78,9 +76,7 @@ $(document).ready(function() {
       
       var btn = $(this)[0];
       
-      var activeTab = content.filter((index, el) => {
-        return $(el)[0].dataset.type === btn.dataset.type
-      })[0];
+      var activeTab = content.filter((index, el) => $(el)[0].dataset.type === btn.dataset.type)[0];
       
       $(activeTab).addClass('active');
       $(this).addClass('active');
@@ -110,7 +106,7 @@ $(document).ready(function() {
   tabInit('.tabs');
   
   /*counter*/
-  if($('.counter')){    
+  if($('.counter').length > 0){    
     var add = $('.counter').find('.add'),
         ded = $('.counter').find('.ded'),
         count = $('.counter').find('.count')[0],
@@ -127,6 +123,14 @@ $(document).ready(function() {
     })
   }
   
+  /*traspilate blog items matrix*/
+  if($('.blog__other').length > 0){
+    var blogList = $('.tab.active .blog__other').find('.other__item');
+    blogList = blogList
+      .map((i,el) => ({...$(el), id: i}))
+      .sort((a,b) => a.id%3 - b.id%3);
+    $('.tab.active .blog__other').html(blogList.map((i,el) => $(el)[0]));
+  }
   
   /*volume change*/
   $('.volume__item').on('click', function(){

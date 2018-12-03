@@ -49,3 +49,25 @@ body{
   }
 }
 
+.home{
+  &__salons{
+    @media screen and (min-width: 600px) {
+      padding: 4rem 3rem 5rem !important;
+      .title{
+        padding: 0; 
+      }
+      .salons__desc{
+        padding: 0;
+      }
+      .salons__item{
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        padding: 0 10rem;
+        img{
+          height: 12rem;
+        }
+      }
+    }
+    
+  }
+}
