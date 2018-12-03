@@ -67,7 +67,37 @@ body{
           height: 12rem;
         }
       }
+      .salons__link{        
+        display: flex;
+        width: 100%;
+        height: 100%;
+        flex-direction: row-reverse;
+        text-decoration: none;
+        justify-content: space-between;
+        align-items: center;
+      }
     }
-    
+    @media screen and (min-width: 1100px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      .salons__item{
+        flex-direction: row-reverse;
+        padding: 0 1rem;        
+        width: 50%;
+        background: none !important;
+        .salons__link{
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          padding: 0 6rem;
+        }
+        &.vlad .salons__link{
+          background-image: url(../img/salon_vlad.png);
+        }
+        &.hab .salons__link{      
+          background-image: url(../img/salon_hab.png);
+        }
+      }
+    }
   }
 }
