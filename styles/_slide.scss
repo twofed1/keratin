@@ -90,23 +90,5 @@
         border-width: 0 2px 2px 0;
       }      
     }
-  }
-  &--home{
-    @media screen and (min-width: 770px) {
-      .slide__desc{
-        display: flex;
-        justify-content: space-between;
-        padding: 3rem 1rem;
-        p{
-          margin-top: 0;
-          &:last-child{
-            margin-bottom: 0;
-          }
-        }
-        >div{
-          padding-right: 4rem;
-        }
-      }
-    }
-  }
+  }  
 }

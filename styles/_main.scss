@@ -52,12 +52,9 @@ body{
 .home{
   &__salons{
     @media screen and (min-width: 600px) {
-      padding: 4rem 3rem 5rem !important;
-      .title{
-        padding: 0; 
-      }
-      .salons__desc{
-        padding: 0;
+      padding: 4rem 2rem 5rem !important;
+      .title, .salons__desc{
+        padding: 0 2rem !important; 
       }
       .salons__item{
         flex-direction: row-reverse;
@@ -80,6 +77,9 @@ body{
     @media screen and (min-width: 1100px) {
       flex-direction: row;
       flex-wrap: wrap;
+      .title, .salons__desc{
+        padding: 0 7rem !important;        
+      }
       .salons__item{
         flex-direction: row-reverse;
         padding: 0 1rem;        
@@ -90,12 +90,115 @@ body{
           background-size: cover;
           background-position: center;
           padding: 0 6rem;
+          p{
+            padding-right: 2rem;
+          }
+          img{
+            margin: 0;
+          }
         }
         &.vlad .salons__link{
           background-image: url(../img/salon_vlad.png);
         }
         &.hab .salons__link{      
           background-image: url(../img/salon_hab.png);
+        }
+      }
+    }
+  }
+  &__masters{
+    margin-bottom: 10rem;
+    border-bottom: 2px solid $grey;
+    @media screen and (min-width: 600px) {
+      flex-direction: row !important;
+      flex-wrap: wrap;
+      margin-bottom: 10rem !important;
+      .title, .masters__desc{
+        padding: 0 2rem !important;        
+      }
+    }
+    @media screen and (min-width: 1100px) {
+      .title, .masters__desc{
+        padding: 0 7rem !important;        
+      }      
+    }
+    .btn{
+      margin: 0 auto -4rem;
+      border-color: $grey;
+    }
+  }
+  &__catalog{
+    margin: 4rem auto;
+    align-items: flex-start;
+    .btn{
+      margin: auto;
+    }
+    .catalog{
+      align-items: stretch;
+      .catalog__item{
+        justify-content: space-between;
+      }
+    }
+    @media screen and (min-width: 600px) {
+      .title, .desc{
+        padding: 0 2rem 3rem !important;        
+      }
+    }
+    @media screen and (min-width: 1100px) {
+      .title, .desc{
+        padding: 0 7rem 7rem !important;        
+      }
+    }
+  }
+  &__training{
+    @media screen and (min-width: 600px) {
+      border-width: 1rem !important;
+      padding: 7rem 9rem 6rem !important;
+      .training__desc{        
+        text-align: center;
+      }
+    }
+    @media screen and (min-width: 1200px) {
+      padding: 7rem 917m 6rem !important;
+    }
+  }
+  &__slide{
+    @media screen and (min-width: 770px) {
+      .slide__desc{
+        display: flex;
+        justify-content: space-between;
+        padding: 3rem 2rem;
+        p{
+          margin-top: 0;
+          &:last-child{
+            margin-bottom: 0;
+          }
+        }
+        >div{
+          p{            
+            padding-right: 4rem;
+          }
+        }
+      }
+    }
+    @media screen and (min-width: 1100px) {
+      .heading, .description{
+        width: 80%;
+        margin: auto;
+      }
+      .heading{
+        padding: 5rem 0 7rem;
+      }
+      .description{
+        padding: 0 0 11rem;
+      }
+      .slide__desc{
+        padding: 3rem 7rem;
+        >div{
+          display: flex;
+          p:first-child{
+            flex: 1;
+          }
         }
       }
     }
