@@ -88,14 +88,19 @@
     margin-bottom: 7rem;
     text-decoration: none;
     color: $dark_text;
-    @media screen and (min-width: 700px) {
+    &:last-child{
+      margin-bottom: 2.5rem;
+    }
+    @media screen and (min-width: 770px) {
       width: 33%;
+      &:last-child{
+        margin-bottom: 7rem;
+      }
     }
   }
   &__img{
-//    height: 40rem;
     width: auto;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
   }
   &__desc{
     display: flex;
@@ -111,7 +116,8 @@
       font-weight: 600;
     }
     .text{
-      font-size: 1.4rem;
+      font-size: 1.22rem;
+      line-height: 1.2;
       text-align: center;
     }
     .price{

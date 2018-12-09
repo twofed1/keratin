@@ -4,7 +4,7 @@
   margin-bottom: 3rem;
   .title{
     padding: 0 3rem;
-    margin-bottom: 4rem;
+    margin-bottom: 1rem;
     @media screen and (min-width: 600px) {
       padding: 0 2rem;
     }
@@ -18,7 +18,8 @@
   &__desc{
     width: 100%;
     padding: 0 3rem;
-    margin-bottom: 7rem;
+    line-height: 1.75;
+    margin-bottom: 4.8rem;
     @media screen and (min-width: 600px) {
       padding: 0 2rem;
     }
@@ -34,7 +35,7 @@
     flex-direction: column;
     align-items: center;
     &:not(:last-child){
-      margin-bottom: 4rem;
+      margin-bottom: 6rem;
     }
     &:nth-child(2n) .masters__portrait:after {background-image: url(../img/blot2.png);}
     &:nth-child(3n) .masters__portrait:after {background-image: url(../img/blot3.png);}
@@ -42,6 +43,9 @@
     
     @media screen and (min-width: 600px) {
       width: 50%;
+      &:not(:last-child){
+        margin-bottom: 6.5rem;
+      }
       &:last-child{
         margin-bottom: 4rem;
       }
@@ -52,8 +56,12 @@
   }
   &__position{
     font-size: 1.2rem;
+    line-height: 1.2;
     font-weight: 500;    
     white-space: nowrap;
+    &:first-child{
+      margin-top: 1.5rem;
+    }
     @media screen and (min-width: 1000px) {
       white-space: normal;
     }
@@ -61,13 +69,15 @@
   &__name{
     display: flex;
     flex-direction: column;
+    width: 100%;
     padding: 0 6rem;
-    margin-top: 2rem;
+    margin: 0;
     font-size: 1.7rem;
     font-weight: 600;
     color: $accent;    
     @media screen and (min-width: 600px) {
       margin-top: 3rem;
+      width: auto;
     }    
     @media screen and (min-width: 1000px) {
       padding: 0 0 0 2rem;

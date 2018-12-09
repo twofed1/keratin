@@ -1,5 +1,5 @@
 footer{
-  padding: 4rem 3rem 5rem;
+  padding: 2rem 3rem 5rem;
   color: $grey_text;
   .container{
     @media screen and (min-width: 600px) {
@@ -15,13 +15,13 @@ footer{
     }
   }
   @media screen and (min-width: 600px) {
-    padding: 4rem 0;
+    padding: 3rem 0 4rem;
   }
 }
 
 .footer{
   &__socials{
-    margin: 2rem 0;
+    margin: 1rem 0 2.5rem;
     @media screen and (min-width: 600px) {
       display: flex;
       align-items: center;
@@ -31,12 +31,15 @@ footer{
   &__links{
     display: flex;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 0rem;
     &-wrapper{
       display: flex;
       flex-direction: column;
-      align-items: flex-end;
-      justify-content: center;
+      align-items: flex-start;
+      justify-content: center;    
+      @media screen and (min-width: 600px) {
+        align-items: flex-end;
+      }
     }    
     @media screen and (min-width: 600px) {
       margin: 0;
@@ -52,6 +55,8 @@ footer{
 }
 
 .copyright{
+  font-size: 1rem;
+  line-height: 1.2;
   @media screen and (min-width: 600px) {
     margin: 0;
     font-size: 1rem;

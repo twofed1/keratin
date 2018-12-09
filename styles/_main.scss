@@ -11,14 +11,20 @@ body{
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   color: $dark;
-  line-height: 1.5;
+  line-height: 1.7;
   background-color: $light;
 }
 
 .price{
+  line-height: 2.5rem;
   font-weight: 600;
+  @media screen and (min-width: 600px) {
+    letter-spacing: 0.3px;
+    padding-left: 0.5rem;
+    font-size: 1.6rem;
+  }
   .sale{
-    margin-right: 2rem;
+    margin-right: 1.3rem;
     color: $secondary;
     text-transform: uppercase;
     text-decoration: line-through;
@@ -27,6 +33,7 @@ body{
 
 .desc{
   padding: 0 3rem 3rem;
+  margin: 0;
   p{
     margin: 0 0 2rem;
   }
@@ -51,27 +58,52 @@ body{
 
 .home{
   &__salons{
+    padding: 0 0 5.5rem;
+    .title{
+      margin-bottom: 1rem;
+    }
+    .salons__link{
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      text-decoration: none;
+    }
     @media screen and (min-width: 600px) {
-      padding: 4rem 2rem 5rem !important;
-      .title, .salons__desc{
-        padding: 0 2rem !important; 
+      padding: 4rem 2rem 5rem;
+      .salons__desc{
+        padding: 0 2rem; 
+        font-size: 1.3rem;
+        line-height: 1.6;
+        margin-bottom: 6.5rem;
+      }
+      .title{
+        font-size: 2rem;
+        font-weight: 500;
+        padding: 0.5rem 2rem 0;
       }
       .salons__item{
         flex-direction: row-reverse;
         justify-content: space-between;
         padding: 0 10rem;
+        height: 42rem;        
         img{
           height: 12rem;
         }
+        .location{
+          padding-left: 2rem;
+          margin-top: 3rem;
+          font-size: 4.3rem;
+        }
+        .address{
+          margin-top: 0.6rem;
+          font-size: 1.7rem;
+        }
       }
-      .salons__link{        
-        display: flex;
+      .salons__link{
         width: 100%;
         height: 100%;
         flex-direction: row-reverse;
-        text-decoration: none;
         justify-content: space-between;
-        align-items: center;
       }
     }
     @media screen and (min-width: 1100px) {
@@ -107,14 +139,18 @@ body{
     }
   }
   &__masters{
-    margin-bottom: 10rem;
-    border-bottom: 2px solid $grey;
+    margin-bottom: 14rem;
     @media screen and (min-width: 600px) {
-      flex-direction: row !important;
+      flex-direction: row;
       flex-wrap: wrap;
-      margin-bottom: 10rem !important;
-      .title, .masters__desc{
-        padding: 0 2rem !important;        
+      .masters__desc{
+        padding: 0 2rem;        
+        margin-bottom: 5.5rem;
+      }
+      .title{
+        font-size: 2rem;
+        font-weight: 500;
+        padding: 0.5rem 2rem 0;
       }
     }
     @media screen and (min-width: 1100px) {
@@ -122,26 +158,45 @@ body{
         padding: 0 7rem !important;        
       }      
     }
-    .btn{
-      margin: 0 auto -4rem;
-      border-color: $grey;
-    }
   }
   &__catalog{
-    margin: 4rem auto;
+    margin: 4rem auto 10.8rem;
     align-items: flex-start;
     .btn{
       margin: auto;
     }
+    .title{
+      padding: 3.5rem 3rem 0.5rem;
+    }
     .catalog{
+      padding: 3rem 0 0;
       align-items: stretch;
       .catalog__item{
         justify-content: space-between;
+        &:hover{
+          
+        }
+        @media screen and (min-width: 600px) {
+          margin-bottom: 2.5rem;
+          &:last-child{
+            margin-bottom: 2.5rem;
+          }
+        }
+      }
+      &__slider{
+        background-image: none;
       }
     }
     @media screen and (min-width: 600px) {
-      .title, .desc{
-        padding: 0 2rem 3rem !important;        
+      margin-top: 7rem;
+      margin-bottom: 10rem;
+      .title{
+        font-size: 2rem;
+        font-weight: 500;
+        padding: 0.5rem 2rem 0;
+      }
+      .desc{
+        padding: 0.5rem 2rem 3rem;        
       }
     }
     @media screen and (min-width: 1100px) {
@@ -152,10 +207,12 @@ body{
   }
   &__training{
     @media screen and (min-width: 600px) {
-      border-width: 1rem !important;
-      padding: 7rem 9rem 6rem !important;
+      max-width: 720px;
+      border-width: 0.8rem;
+      padding: 6.5rem 7rem 6rem;
       .training__desc{        
         text-align: center;
+        margin: 0 auto 6.5rem;
       }
     }
     @media screen and (min-width: 1200px) {
@@ -175,8 +232,15 @@ body{
           }
         }
         >div{
+          @media screen and (min-width: 600px) {
+            flex: 1;
+          }
           p{            
             padding-right: 4rem;
+            font-size: 1.4rem;
+            line-height: 1.3;
+            padding-left: 0.5rem;
+            margin-bottom: 1.3rem;
           }
         }
       }
@@ -202,5 +266,20 @@ body{
         }
       }
     }
+  }
+}
+
+
+.only-mobile{
+  display: block;
+  @media screen and (min-width: 600px) {
+    display: none;
+  }
+}
+
+.only-desktop{
+  display: none;
+  @media screen and (min-width: 600px) {
+    display: block;
   }
 }
