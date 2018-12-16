@@ -1,3 +1,9 @@
+#trainig-page{
+  .section{
+    margin-bottom: 0;
+  }
+}
+
 .training{
   display: flex;
   flex-direction: column;
@@ -90,6 +96,9 @@
       &.prev{
         left: -3rem;
       }
+      @media screen and (min-width: 770px) {
+        display: none;
+      }
     }
   }
   &__list{
@@ -120,6 +129,7 @@
     }
     @media screen and (min-width: 1000px) {
       margin-bottom: 0;
+      margin-left: 2rem;
       flex: 1;
     }    
   }

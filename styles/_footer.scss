@@ -31,10 +31,20 @@ footer{
       margin: 0 6rem;
     }
     a{
-      width: 4rem;
-      height: 4rem;
+      width: 3.3rem;
+      height: 3.3rem;
       border-width: 2px;
       padding: 0.6rem;
+      border-color: $secondary;
+      svg path{
+        fill: $secondary;
+      }
+      &:hover{
+        border-color: $grey;
+        svg path{
+          fill: $grey;
+        }
+      }
     }
   }
   &__links{

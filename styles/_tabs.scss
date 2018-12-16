@@ -62,9 +62,13 @@
     img{
       max-width: 3rem;
       margin-right: 1rem;
+      filter: grayscale(1);
     }
     &.active{
       color: $secondary;
+      img{
+        filter: grayscale(0);
+      }
       &:after{
         transform: scaleX(1);
       }

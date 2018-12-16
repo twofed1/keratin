@@ -27,6 +27,12 @@ $(document).ready(function() {
     $('.product__section.catalog__slider').find('.desc').prepend(productHeader);
   }
   
+  if(window.innerWidth > 750 && $('.field--textarea').length){
+    var label = $('.field--textarea').find('label'),
+        textarea = $('.field--textarea').find('textarea');
+    textarea.css('text-indent', label.width() + 10);
+  };
+  
   $('.call_to_action').find('.title').html(
     window.innerWidth > 770 
       ? `<span>Стань частью содружества <img src="img/logo.png" alt="" class="action__logo">. Запишись сейчас!</span>`
@@ -103,6 +109,31 @@ $(document).ready(function() {
     
   }
   
+  /*maps*/
+  if(window.location.pathname.indexOf('salons') > 0){
+    var mapArr = $('.salons__map');
+    var addressArray = [
+      {id: 'map-vlad', coord: '43.1147008,131.9121172', name: ''},
+      {id: 'map-hab', coord: '43.1147008,131.9121172', name: ''},
+      {id: 'map-blag', coord: '43.1147008,131.9121172', name: ''},
+      {id: 'map-moscow', coord: '43.1147008,131.9121172', name: ''},
+    ]
+    mapArr.map((index, el) => {
+      mapInit(el.id, el.coord);
+    });
+  };
+  
+  function mapInit(id, coord){
+    var myOptions = {
+        center: new google.maps.LatLng(coord),
+        zoom: 18,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        disableDefaultUI: true
+    };
+    var map = new google.maps.Map(document.getElementById(id), myOptions);
+    console.log(document.getElementById(id));
+  }
+  
   /*init tabs*/
   tabInit('.tabs');
   
@@ -138,4 +169,5 @@ $(document).ready(function() {
     $(this).siblings('.volume__item').removeClass('active');
     $(this).addClass('active');
   });
+  
 })

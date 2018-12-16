@@ -116,6 +116,14 @@ body{
     margin-bottom: 12rem;
   }
   &__slide{
+    @media screen and (min-width: 600px) {
+      .heading{
+        line-height: 1.2;
+      }
+      .slide__desc>div{
+        flex: 1;
+      }
+    }
     @media screen and (min-width: 770px) {
       .slide__desc{
         display: flex;
@@ -128,9 +136,6 @@ body{
           }
         }
         >div{
-          @media screen and (min-width: 600px) {
-            flex: 1;
-          }
           p{            
             padding-right: 4rem;
             font-size: 1.4rem;
@@ -143,7 +148,7 @@ body{
     }
     @media screen and (min-width: 1100px) {
       .heading, .description{
-        width: 80%;
+        width: 70%;
         margin: auto;
       }
       .heading{
