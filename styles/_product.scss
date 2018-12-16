@@ -26,23 +26,21 @@
     }
     .slide__pagination{
       display: inline-flex;
+      justify-content: flex-end;
       margin-left: auto;
-      padding: 0 3rem;
-      
-    }
-    .slide__img{
-      width: 80%;
+      padding: 0 3rem;   
+      @media screen and (min-width: 700px) { 
+        display: none;
+      }
     }
     &.catalog__slider{
-      @media screen and (min-width: 700px) {  
-        background-image: url(../img/blot_product.png);
+      @media screen and (min-width: 700px) { 
         .desc{
           position: absolute;
           top: 50%;
           left: 40%;
           width: 50%;
           transform: translate3d(0, -50%, 0);
-          padding: 0;
         }
         .price__wrapper{
           display: flex;
@@ -51,11 +49,9 @@
           .price{
             margin: 0;
           }
-          .btn{
-            margin-left: auto;
-          }
         }
       }
+      
     }
   }
   &__control{
@@ -75,6 +71,11 @@
     @media screen and (min-width: 700px) {
       .heading, p{
         padding: 0;
+      }
+    }
+    @media screen and (min-width: 700px) {
+      p{
+        font-size: 1.4rem;
       }
     }
   }  
@@ -126,7 +127,10 @@
     }
   }
   .count{
-    padding: 0 1rem;
+    padding: 0;
+    @media screen and (min-width: 600px) { 
+      padding: 0 1rem;
+    }
   }
 }
 
@@ -138,6 +142,7 @@
     font-weight: 600;
     padding: 0.5rem 1rem;
     border: 2px solid transparent;
+    cursor: pointer;
     transition: $anim;
     @media screen and (min-width: 700px) { 
       margin-right: 3rem;
@@ -150,10 +155,13 @@
 }
 
 .breadcrumbs{
-  display: flex;
+  display: none;
   align-items: center;
   list-style: none;
   padding: 0 4rem;
+  @media screen and (min-width: 1000px) { 
+    display: flex;
+  }
   &__item{    
     padding-right: 2rem;
     margin: 0 !important;

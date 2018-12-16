@@ -1,4 +1,6 @@
-input,
+input, textarea{
+  background-color: transparent;
+}
 
 input{
   line-height: 4rem;
@@ -15,14 +17,56 @@ textarea{
   line-height: 4rem;
   border: none;
   height: auto;
-  background-color: #fff; 
   background-image: linear-gradient(transparent 3.8rem, $grey 3.8rem);
   background-size: 100% 4rem;
   background-attachment: local;
 }
 
 .field{
+  position: relative;
   display: flex;
   flex-direction: column;
   margin-bottom: 4rem;
+  @media screen and (min-width: 750px){
+    margin: 0;
+    &__wrapper{
+      margin-bottom: 2rem;
+    }
+    &--textarea{
+      margin-bottom: 6rem;
+    }
+  }  
+}
+
+.field__wrapper{
+  display: flex;
+  flex-direction: column;
+  width: 100%;  
+}
+
+@media screen and (min-width: 750px){
+  .field{
+    flex-direction: row;
+    align-items: flex-end;
+    input, textarea{
+      flex: 1;
+    }
+    input{
+      max-width: 35rem;
+    }
+    label{
+      margin-right: 1rem;
+    }
+    &--textarea{
+      label{
+        position: absolute;
+        top: 0;
+        display: flex;
+        align-items: flex-end;
+        height: 4rem;
+        padding-right: 1rem;
+        background-color: $light;
+      }
+    }
+  }
 }

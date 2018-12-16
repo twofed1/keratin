@@ -7,10 +7,16 @@
     height: 6rem;
     padding: 0;
     background-color: $light;
-    @media screen and (min-width: 600px) {
+    .container{
+      margin: 0 -2rem 0 0;
+    }
+    @media screen and (min-width: 770px) {
       flex-direction: column;
       height: auto;
       padding-top: 5rem;
+      .container{
+        margin: 0;
+      }
     }
   }
   
@@ -23,11 +29,17 @@
     left: 30px;
     top: auto;
     z-index: 10;
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 770px) {
       position: static;
       justify-content: center;
       height: 6rem;
       width: 100%;
+    }
+    @media screen and (min-width: 1000px) {
+      margin-bottom: 1rem;
+      img{
+        height: 3.5rem;
+      }
     }
   }
   
@@ -44,6 +56,19 @@
 
 .cart{
   width: 3rem;
+  svg{
+    width: 2rem;
+    transition: $anim/2;
+    path, circle{
+      fill: $grey;
+      transition: $anim/2;
+    }    
+  }
+  &:hover{
+    svg path, svg circle{
+      fill: $secondary;
+    }
+  }
 }
 
   
@@ -53,8 +78,13 @@
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    @media screen and (min-width: 600px) {
+    align-items: center;
+    @media screen and (min-width: 770px) {
       height: 6rem;
+    }
+    @media screen and (min-width: 1400px) {
+      padding: 0 6rem;
+      margin-bottom: 2rem;
     }
     &:after {
       content: '';
@@ -65,7 +95,7 @@
       background-color: $light;
       width: 100%;
       height: 100%;
-      @media screen and (min-width: 600px) {
+      @media screen and (min-width: 770px) {
         display: none;
       }
     }
@@ -83,7 +113,7 @@
       color: $grey;
       transform: translateY(-100%);
       transition: $anim ease-in;
-      @media screen and (min-width: 600px) {
+      @media screen and (min-width: 770px) {
         position: static;
         flex-direction: row;
         align-items: center;
@@ -105,7 +135,7 @@
       height: 4rem;
       width: 100%;
       transition: $anim;
-      @media screen and (min-width: 600px) {
+      @media screen and (min-width: 770px) {
         width: auto;
       }
       &:hover {
@@ -115,9 +145,12 @@
         font-size: 1.4rem;
         color: inherit;
         text-decoration: none;
-        @media screen and (min-width: 600px) {
+        @media screen and (min-width: 770px) {
           font-size: 1.5rem;
           font-weight: 500;
+        }
+        @media screen and (min-width: 1000px) {
+          font-size: 1.7rem;
         }
       }
     }
@@ -130,13 +163,17 @@
       justify-content: center;
       background-color: transparent;
       border: none;
-      @media screen and (min-width: 600px) {
+      cursor: pointer;
+      @media screen and (min-width: 770px) {
         display: none;
       }
       &:hover,
       &:focus,
       &:active {
         outline: none;
+      }
+      &:hover span{
+        background-color: $secondary;
       }
       span {
         display: block;

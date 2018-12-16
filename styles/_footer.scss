@@ -12,6 +12,9 @@ footer{
       display: inline-flex;
       width: auto;
       margin-right: 6rem;
+      img{
+        height: 2.5rem;
+      }
     }
   }
   @media screen and (min-width: 600px) {
@@ -26,6 +29,12 @@ footer{
       display: flex;
       align-items: center;
       margin: 0 6rem;
+    }
+    a{
+      width: 4rem;
+      height: 4rem;
+      border-width: 2px;
+      padding: 0.6rem;
     }
   }
   &__links{

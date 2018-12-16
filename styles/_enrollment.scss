@@ -1,0 +1,32 @@
+.enrollment{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0 3rem 3rem;
+  @media screen and (min-width: 600px) {
+    padding: 4rem 3rem;
+    margin-bottom: 4rem;
+    .service__control{
+      width: 100%;
+      margin-top: 0;
+    }    
+  }
+  @media screen and (min-width: 1000px) {
+    .service__control{
+      margin-top: 4rem;
+    }    
+  }
+  @media screen and (min-width: 1400px) {
+    padding: 4rem 7rem;    
+  }
+  .heading{
+    text-align: left;
+    margin-bottom: 4rem;
+    width: 100%;
+  }
+  
+}
+
+.tabs__content .enrollment.active{
+  display: flex;
+}

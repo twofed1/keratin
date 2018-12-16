@@ -31,29 +31,8 @@ body{
   }
 }
 
-.desc{
-  padding: 0 3rem 3rem;
-  margin: 0;
-  p{
-    margin: 0 0 2rem;
-  }
-  .title{
-    margin-right: 2rem;
-    padding: 0;
-  }
-  @media screen and (min-width: 600px) {
-    padding: 0 2rem 3rem;
-  }    
-}
-
 .section{
   margin: 4rem 0;
-  >.title{
-    padding: 0 3rem;    
-    @media screen and (min-width: 600px) {
-      padding: 0 2rem;
-    }
-  }
 }
 
 .home{
@@ -75,11 +54,6 @@ body{
         font-size: 1.3rem;
         line-height: 1.6;
         margin-bottom: 6.5rem;
-      }
-      .title{
-        font-size: 2rem;
-        font-weight: 500;
-        padding: 0.5rem 2rem 0;
       }
       .salons__item{
         flex-direction: row-reverse;
@@ -109,7 +83,7 @@ body{
     @media screen and (min-width: 1100px) {
       flex-direction: row;
       flex-wrap: wrap;
-      .title, .salons__desc{
+      .salons__desc{
         padding: 0 7rem !important;        
       }
       .salons__item{
@@ -138,86 +112,8 @@ body{
       }
     }
   }
-  &__masters{
-    margin-bottom: 14rem;
-    @media screen and (min-width: 600px) {
-      flex-direction: row;
-      flex-wrap: wrap;
-      .masters__desc{
-        padding: 0 2rem;        
-        margin-bottom: 5.5rem;
-      }
-      .title{
-        font-size: 2rem;
-        font-weight: 500;
-        padding: 0.5rem 2rem 0;
-      }
-    }
-    @media screen and (min-width: 1100px) {
-      .title, .masters__desc{
-        padding: 0 7rem !important;        
-      }      
-    }
-  }
-  &__catalog{
-    margin: 4rem auto 10.8rem;
-    align-items: flex-start;
-    .btn{
-      margin: auto;
-    }
-    .title{
-      padding: 3.5rem 3rem 0.5rem;
-    }
-    .catalog{
-      padding: 3rem 0 0;
-      align-items: stretch;
-      .catalog__item{
-        justify-content: space-between;
-        &:hover{
-          
-        }
-        @media screen and (min-width: 600px) {
-          margin-bottom: 2.5rem;
-          &:last-child{
-            margin-bottom: 2.5rem;
-          }
-        }
-      }
-      &__slider{
-        background-image: none;
-      }
-    }
-    @media screen and (min-width: 600px) {
-      margin-top: 7rem;
-      margin-bottom: 10rem;
-      .title{
-        font-size: 2rem;
-        font-weight: 500;
-        padding: 0.5rem 2rem 0;
-      }
-      .desc{
-        padding: 0.5rem 2rem 3rem;        
-      }
-    }
-    @media screen and (min-width: 1100px) {
-      .title, .desc{
-        padding: 0 7rem 7rem !important;        
-      }
-    }
-  }
-  &__training{
-    @media screen and (min-width: 600px) {
-      max-width: 720px;
-      border-width: 0.8rem;
-      padding: 6.5rem 7rem 6rem;
-      .training__desc{        
-        text-align: center;
-        margin: 0 auto 6.5rem;
-      }
-    }
-    @media screen and (min-width: 1200px) {
-      padding: 7rem 917m 6rem !important;
-    }
+  &__catalog{   
+    margin-bottom: 12rem;
   }
   &__slide{
     @media screen and (min-width: 770px) {
@@ -257,13 +153,53 @@ body{
         padding: 0 0 11rem;
       }
       .slide__desc{
-        padding: 3rem 7rem;
+        padding: 4rem 7rem;
         >div{
           display: flex;
           p:first-child{
             flex: 1;
           }
+          p{            
+            font-size: 1.7rem;
+          }
         }
+      }
+    }
+  }
+}
+
+
+.socials{
+  display: flex;
+  a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    padding: 0.4rem;    
+    border: 1px solid $grey;
+    transition: $anim/1.5;
+    img{
+      width: 100%;
+    }
+    svg{
+      width: 100%;      
+      path{
+        fill: $grey;
+        transition: $anim/2;
+      }
+    }
+    &:not(:last-child){
+      margin-right: 1rem;
+    }
+    &:hover, &:focus{
+      border-color: $secondary;
+      img{
+        filter: grayscale(0);
+      }
+      svg path{
+        fill: $secondary;
       }
     }
   }

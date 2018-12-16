@@ -1,7 +1,8 @@
 .catalog{
   display: flex;
   flex-direction: column;
-  padding: 10rem 0 0;
+  margin: 4rem auto 10.8rem;
+  align-items: flex-start;    
   @media screen and (min-width: 700px) {
     flex-direction: row;
     flex-wrap: wrap;
@@ -10,8 +11,17 @@
       display: none;
     }
   }
-  .title, .heading{
-    padding: 0 3rem 4rem;
+  @media screen and (min-width: 600px) {
+    margin-top: 7rem !important;
+    margin-bottom: 10rem !important;
+  }
+  >.heading{
+    padding: 0 3rem 4rem;    
+    @media screen and (min-width: 1000px) {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 4rem;
+    }
   }
   .btn{
     margin: auto;
@@ -29,12 +39,12 @@
       }
     }
   }
+  
+  
+  
   &__slider{
     width: 100%;
     @media screen and (min-width: 700px) {
-      background-image: url(../img/blot_slider.png);
-      background-size: contain;
-      background-repeat: no-repeat;
       .desc{
         position: absolute;
         top: 50%;
@@ -55,20 +65,72 @@
         }
       }
     }
+    @media screen and (min-width: 900px) { 
+      .desc{
+        padding: 0 4rem 0 0;          
+      }
+      .btn{
+        margin-left: 10rem;
+      }      
+    }
+    &--product{
+      margin-bottom: 10rem;
+      @media screen and (min-width: 700px) {
+        background: url(../img/blot_product.png) no-repeat center / contain;
+      }
+    }
+    
+    &-wrapper{
+      display: flex;
+      padding: 3rem 0 0 !important;
+      align-items: stretch;
+      .catalog__item{
+        justify-content: space-between;
+        @media screen and (min-width: 600px) {
+          margin-bottom: 2.5rem;
+          &:last-child{
+            margin-bottom: 2.5rem;
+          }
+        }
+      }
+    }
     .slide{
       margin-bottom: 3rem;
       max-width: 1200px;
       margin: auto;
       @media screen and (min-width: 700px) {
-        padding: 0 8rem;        
+        padding: 2rem 8rem 0;
+      }      
+      @media screen and (min-width: 1000px) {
+        padding: 0 8rem;
       }
     }
     .slide__img{
-      width: 80%;
+      width: 100%;
+      background: url(../img/blot_product.png) no-repeat center / cover;
       @media screen and (min-width: 700px) {
+        background: none;
+      }
+      img{
+        transform: translate(-50%, -50%);
+        max-height: 100%;
+        max-width: 100%;
+        width: auto;
+      }
+      @media screen and (min-width: 700px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         max-width: 30%; 
         width: auto;
         max-height: 50rem;
+        img{
+          object-fit: contain;          
+          transform: translate(-50%, -50%);
+        }
+        &:after{
+          display: none;
+        }
       }
     }    
   }
@@ -76,8 +138,10 @@
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
+    justify-content: center;
     width: 100%;
     @media screen and (min-width: 1000px) {
+      justify-content: space-around;
       width: 75%;
     }
   }
@@ -92,15 +156,26 @@
       margin-bottom: 2.5rem;
     }
     @media screen and (min-width: 770px) {
-      width: 33%;
+      width: 50%;
       &:last-child{
         margin-bottom: 7rem;
       }
     }
+    @media screen and (min-width: 1100px) {
+      width: 33%;
+    }
   }
   &__img{
+    position: relative;
     width: auto;
     margin-bottom: 2rem;
+    background: url(../img/blot.png) no-repeat center;
+    background-size: 0%;
+    transition: $anim/2;
+    padding: 0 4rem;
+    &:hover{
+      background-size: 100%;
+    }
   }
   &__desc{
     display: flex;
@@ -153,6 +228,8 @@
   font-weight: 600;
   font-family: 'Montserrat', sans-serif;  
   @media screen and (min-width: 1000px) {
+    text-overflow: ellipsis;
+    overflow: hidden;
     width: 100%;
   }
   &.heading{

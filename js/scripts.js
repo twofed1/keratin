@@ -20,8 +20,9 @@ $(document).ready(function() {
     $('.menu__wrapper').append($(socials));
     cart.html();
     socials.html();
-    
-    
+  }
+  
+  if(window.innerWidth > 700){
     var productHeader = $('.product__header');
     $('.product__section.catalog__slider').find('.desc').prepend(productHeader);
   }

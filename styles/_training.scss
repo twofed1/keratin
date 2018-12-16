@@ -2,6 +2,10 @@
   display: flex;
   flex-direction: column;
   padding: 6rem 3rem;
+  margin: auto;
+  @media screen and (min-width: 600px) {
+    margin-bottom: 6rem;
+  }
   border-color: $secondary;
   border-style: solid;
   border-width: 1rem 0;
@@ -15,6 +19,10 @@
   }
   &__desc{
     margin-bottom: 4rem;
+    @media screen and (min-width: 600px) {       
+      text-align: center;
+      margin: 0 auto 6.5rem;
+    }
   }
   &__registration{
     .heading{    
@@ -28,7 +36,48 @@
       text-align: center;
     }
   }
+  &__form{
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      .field__wrapper, .heading{
+        width: 49%;
+        display: inline-flex;
+      }
+      .heading{
+        margin: 0;
+        padding-right: 4rem;
+      }
+      .field__wrapper .field{
+        margin-bottom: 2rem;
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+      .field--textarea{
+        margin-top: 4rem;
+        width: 100%;
+      }
+    }
+  }
+  @media screen and (min-width: 600px) {
+    max-width: 720px;
+    border-width: 0.8rem;
+    padding: 6.5rem 7rem 6rem;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 1100px;
+    padding: 7rem 9rem 6rem;
+  }
+  @media screen and (min-width: 1400px) {
+    max-width: 1300px;
+  }  
 }
+
+
+
 
 .date{
   &__slider{
@@ -49,9 +98,11 @@
     padding: 0;
     .num{
       font-size: 3.6rem;
+      line-height: 1.2;
     }
     .month{
       font-size: 2.4rem;
+      line-height: 1.2;
     }
   }
   &__wrapper{
@@ -62,12 +113,15 @@
     @media screen and (min-width: 770px) {
       flex-direction: row;
       align-items: center;
-      width: auto;
       .text--sm{
         flex: 0;
         margin-left: 4rem;
       }
     }
+    @media screen and (min-width: 1000px) {
+      margin-bottom: 0;
+      flex: 1;
+    }    
   }
   &__period{
     color: $dark_text;
@@ -75,16 +129,29 @@
     span{
       font-weight: bold;
       font-size: 2rem;
+      @media screen and (min-width: 1000px) {
+        margin-left: 1rem;
+      }
     }
     @media screen and (min-width: 770px) {
       flex: 0;
       margin-left: 4rem;
       text-align: right;
     }
+    @media screen and (min-width: 1000px) {
+      display: flex;
+      align-items: center;
+      margin-left: 8rem;
+    }
   }
   &__item{
     display: flex;
     flex-direction: column;
     color: $grey;
+    text-decoration: none;
+    transition: $anim/2;
+    &:hover, &:focus, &.active{
+      color: $secondary;
+    }
   }
 }

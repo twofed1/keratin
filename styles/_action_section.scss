@@ -3,6 +3,11 @@
   @media screen and (min-width: 600px) {
     border-bottom: 1rem solid $secondary;   
   }
+  @media screen and (min-width: 1400px) {
+    .container{
+      padding: 0 9rem;
+    } 
+  }
   .title{
     display: flex;
     flex-direction: column;
@@ -48,7 +53,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 2.8rem 2rem 3.4rem;
+    padding: 3rem 2rem 3.5rem;
     border-style: solid;
     border-color: $secondary;
     border-width: 2px 0;
@@ -66,6 +71,9 @@
       width: calc(50% - 1rem);
       border-width: 2px;
       margin: 0 !important;
+    }
+    @media screen and (min-width: 1400px) {
+      padding: 4rem 8rem;
     }
   }
   &__text{
