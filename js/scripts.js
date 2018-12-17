@@ -30,7 +30,7 @@ $(document).ready(function() {
   if(window.innerWidth > 750 && $('.field--textarea').length){
     var label = $('.field--textarea').find('label'),
         textarea = $('.field--textarea').find('textarea');
-    textarea.css('text-indent', label.width() + 10);
+    textarea.css('text-indent', label.width() + 20);
   };
   
   $('.call_to_action').find('.title').html(
