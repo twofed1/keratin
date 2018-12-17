@@ -7,12 +7,22 @@ html, body{
 }
 
 body{
+  min-height: 100vh;
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   color: $dark;
   line-height: 1.7;
   background-color: $light;
+  >section, >div{
+    &:first-child{
+      padding-top: 6rem;
+    }
+  }
+}
+
+button{
+  font-family: 'Montserrat', sans-serif;
 }
 
 .price{
@@ -207,6 +217,30 @@ body{
         fill: $secondary;
       }
     }
+  }
+}
+
+.not-found{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: url(../img/blot_404.png) no-repeat center fixed / 100%;
+  width: 100%;
+  min-height: 100vh;  
+  padding: 2rem;
+  .message{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 7rem;
+  }
+  .num{
+    font-size: 12.2rem;
+    color: $secondary;
+    font-weight: 400;
+    margin-left: 5rem;
   }
 }
 

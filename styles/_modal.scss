@@ -1,0 +1,83 @@
+.overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 6rem;
+  overflow: auto;
+  opacity: 0;
+  @media screen and (max-width: 1000px){
+    padding: 2rem;
+  }
+  @media screen and (max-width: 600px){
+    padding: 1rem;
+  }
+}
+
+.modal{
+  position: absolute;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  max-width: 66rem;
+  width: 100%;
+  margin: auto;
+  opacity: 0;
+  background-color: $light;
+  border: 0.5rem solid $secondary;
+  padding: 10rem 13rem;
+  transition: $anim;
+  transform: scale(.95);
+  @media screen and (max-width: 1000px){
+    padding: 2rem;
+  }
+  &.open{
+    position: relative;
+    opacity: 1;
+    z-index: 10;
+    transform: scale(1);
+  }  
+}
+
+.close-modal{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;  
+  svg{
+    width: 1.6rem;
+    height: 1.6rem;
+    transition: $anim;
+    path{      
+      fill: $dark;
+    }
+  }
+  &:hover, &:focus {
+    outline: none;
+    svg{
+      transform: rotate(90deg);
+    }
+  }
+}
+
+body.modal-open{
+  overflow: hidden;
+  .overlay{
+    z-index: 100;
+    opacity: 1;
+    background-color: $light_op;
+  }
+}
+

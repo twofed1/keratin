@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Caveat|Montserrat:500,600&amp;subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Caveat|Montserrat:300,400,500,600,700&amp;subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="styles/styles.css">
   <title>Document</title>
   <link rel="shortcut icon" href="favicon.ico">	
@@ -165,7 +165,7 @@
       <p class="training__desc text--xs">
        Великолепный дом с современными планировками и высокими потолками, рассчитанный на семью из 4-6 человек. Особенность первого этажа - большая кухня-столовая-гостиная с выходом на просторную террасу, а так же прачечная, где предусмотрено место для глажки, стирки и размещения вещей. Великолепный дом с современными планировками и высокими потолками, рассчитанный на семью из 4-6 человек. 
       </p>
-      <a href="#" class="btn">узнать больше</a>
+      <a href="#" class="btn open-terms">узнать больше</a>
     </section>
     <section class="home__catalog container">
       <h2 class="title">
@@ -288,6 +288,35 @@
         </div> <span>Дизайн и разработка сайта</span> </div>
     </div>
   </footer>
+  <div class="overlay">
+    <div class="modal">
+      <button class="close-modal"><img src="https://img.icons8.com/material-rounded/24/000000/multiply.png"></button>
+      <div class="content">
+        <form id="modal-erquest" action="">
+          <div class="field">
+             <label for="">
+               Ваше имя:
+             </label>
+            <input type="text" name="name">
+           </div>
+           <div class="field">
+             <label for="">
+               Ваш email:
+             </label>
+            <input type="email" name="email">
+           </div>
+           <div class="field">
+             <label for="">
+               Контактый телефон:
+             </label>
+            <input type="phone" name="phone">
+           </div>
+           <p class="text--sm">Наш менеджер свяжется с вами в течение 30 минут для уточнения всех деталей.</p>
+           <div class="btn__wrapper"><button class="btn">отправить сообщение</button></div>
+        </form>
+      </div>
+    </div>
+  </div>
   <script src="js/jquery.js"></script>
   <script src="js/scripts.js"></script>
 </body>

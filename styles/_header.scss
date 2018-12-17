@@ -1,21 +1,66 @@
-  header {
-    position: relative;
-    z-index: 10;
+    header {
+    position: fixed;
+    z-index: 100;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 6rem;
+    width: 100%;
     padding: 0;
     background-color: $light;
     .container{
       margin: 0 -2rem 0 0;
     }
+    
     @media screen and (min-width: 770px) {
+      position: relative;
       flex-direction: column;
       height: auto;
       padding-top: 5rem;
       .container{
         margin: 0;
+      }
+    }
+    
+    &.fixed{
+      border-bottom: 2px solid $secondary;
+      .menu__wrapper{
+        border-bottom: 2px solid $secondary;
+      }
+      @media screen and (min-width: 770px) {
+        padding: 0;
+        position: fixed;
+        .container{
+          flex-direction: row;
+          align-items: center;
+        }
+        .logo{
+          width: auto;
+          height: 2rem;
+          margin: 0;
+          img{
+            height: 100%;
+            width: auto;
+          }
+        }
+        .menu{
+          margin: 0;
+          &__wrapper{
+            padding: 0 0 0 3rem;
+            border: none;
+          }
+          &__item{
+            margin: 0 1rem;
+          }
+        }
+      }
+      @media screen and (min-width: 1100px) {
+        .logo{
+          margin: 0 auto 0 6rem;
+        }
+        .menu__wrapper{
+          padding: 0 6rem;
+        }
       }
     }
   }
@@ -126,6 +171,14 @@
       }
       .social__btn{
         height: 2rem;
+      }
+      .socials{
+        position: absolute;
+        right: 4rem;
+        bottom: 3rem;
+        @media screen and (min-width: 770px) {
+          position: static;
+        }
       }
     }
     &__item {
