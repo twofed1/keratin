@@ -124,5 +124,9 @@
         border-width: 0 2px 2px 0;
       }      
     }
+    @media screen and (min-width: 770px) {
+      &.prev{left: 0;}
+      &.next{right: 0;}
+    }
   }  
 }

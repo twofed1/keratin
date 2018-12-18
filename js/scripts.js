@@ -5,8 +5,21 @@ $(document).ready(function() {
     navText: [
       '<button class="slide__btn prev"><span></span></button>',
       '<button class="slide__btn next"><span></span></button>',
-    ]
-    
+    ],
+    responsive:{
+        0:{
+            items:1,
+            nav:true
+        },
+        770:{
+            items:3,
+            nav:true
+        },
+        1200:{
+            items:4,
+            nav:true,
+        }
+    }    
   });
   
   
