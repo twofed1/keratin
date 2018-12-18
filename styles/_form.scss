@@ -50,6 +50,9 @@ textarea{
     align-items: flex-end;
     input, textarea{
       flex: 1;
+      &:focus{
+        outline: none;        
+      }
     }
     input{
       max-width: 35rem;

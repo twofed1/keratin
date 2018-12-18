@@ -1,4 +1,15 @@
 $(document).ready(function() {
+  
+  $(".owl-carousel").owlCarousel({
+    nav: true,
+    navText: [
+      '<button class="slide__btn prev"><span></span></button>',
+      '<button class="slide__btn next"><span></span></button>',
+    ]
+    
+  });
+  
+  
   /*menu*/
   var burger = $('.menu__btn'),
       menu = $('.menu__wrapper');
@@ -35,8 +46,8 @@ $(document).ready(function() {
   
   $('.call_to_action').find('.title').html(
     window.innerWidth > 770 
-      ? `<span>Стань частью содружества <img src="img/logo.png" alt="" class="action__logo">. Запишись сейчас!</span>`
-      : `<img src="img/logo.png" alt="" class="action__logo"><span>Стань частью содружества. <br/> Запишись сейчас!</span>`
+      ? `<span>Стань частью содружества <img src="img/logo.svg" alt="" class="action__logo">. Запишись сейчас!</span>`
+      : `<img src="img/logo.svg" alt="" class="action__logo"><span>Стань частью содружества. <br/> Запишись сейчас!</span>`
   )
   
   
@@ -166,28 +177,29 @@ $(document).ready(function() {
   
   
   /*modals*/
-  $(window).on('click', function(){
+  function closeModal(){
+    var top = $('body').position().top;
     if($('body').hasClass('modal-open')){
+      $('body').removeAttr('style');
       $('body').removeClass('modal-open');
       $('.modal').removeClass('open');
-    }
-  })
+      $(window).scrollTop(top);
+    }    
+  }
+  
+  $('.close-modal').on('click', closeModal);
   
   $('.open-terms').on('click', function(e){
-    e.stopPropagation();
     $('body').addClass('modal-open');
     $('.modal').addClass('open');
+    $('body').css({marginTop: '-'+$(this).offset().top+'px'});
   })
   
   $('#modal-request').on('submit', function(e){
-    e.stopPropagation();
+    e.preventDefault();
     $(this).addClass('success');
   })
 
-  $('.close-modal').on('click', function(){
-    $('body').removeClass('modal-open');
-    $(this).closest('.modal').removeClass('open');
-  })
   
   /*traspilate blog items matrix*/
   if($('.blog__other').length > 0){

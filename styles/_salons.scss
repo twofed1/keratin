@@ -20,7 +20,13 @@
       background-image: url(../img/salon_hab.png);
     }
     .emblem{
-      margin-right: 1.8rem;
+      margin-right: 2rem;
+      max-width: 4rem;
+      @media screen and (min-width: 600px) {
+        max-width: none;
+        margin-right: 0;
+        margin-left: 2rem;
+      }
     }
     .location{
       display: flex;

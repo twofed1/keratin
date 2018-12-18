@@ -14,15 +14,17 @@ body{
   color: $dark;
   line-height: 1.7;
   background-color: $light;
-  >section, >div{
-    &:first-child{
-      padding-top: 6rem;
-    }
+  padding-top: 6rem;
+  @media screen and (min-width: 770px) {
+    padding-top: 0;
   }
 }
 
 button{
   font-family: 'Montserrat', sans-serif;
+  &:hover{
+    cursor: pointer;
+  }
 }
 
 .price{
@@ -47,6 +49,14 @@ button{
 }
 
 .home{
+  &__slide{
+    .heading br{
+      display: none;
+      @media screen and (min-width: 600px) {
+        display: block;
+      }      
+    }
+  }
   &__salons{
     padding: 0 0 5.5rem;
     .title{
@@ -257,5 +267,14 @@ button{
   display: none;
   @media screen and (min-width: 600px) {
     display: block;
+  }
+}
+
+#moda-request{
+  .field{
+    margin-bottom: 2rem;
+  }
+  p{
+    margin: 3rem 0;
   }
 }
