@@ -37,7 +37,9 @@
 }
 
 .action{
-  &__logo{}
+  &__logo{
+    height: 2rem;
+  }
   &__wrapper{
     @media screen and (min-width: 600px) {
       width: 100%;

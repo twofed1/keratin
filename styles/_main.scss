@@ -270,11 +270,13 @@ button{
   }
 }
 
-#moda-request{
-  .field{
-    margin-bottom: 2rem;
-  }
+#modal-request{
   p{
-    margin: 3rem 0;
+    margin: 3rem 0 !important;
+  }
+  .btn__wrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: 7rem;    
   }
 }

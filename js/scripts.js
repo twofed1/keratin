@@ -1,6 +1,7 @@
 $(document).ready(function() {
   
-  $(".owl-carousel").owlCarousel({
+  if($(".owl-carousel").length){
+    $(".owl-carousel").owlCarousel({
     nav: true,
     navText: [
       '<button class="slide__btn prev"><span></span></button>',
@@ -21,7 +22,7 @@ $(document).ready(function() {
         }
     }    
   });
-  
+}
   
   /*menu*/
   var burger = $('.menu__btn'),
