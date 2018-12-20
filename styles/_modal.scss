@@ -73,7 +73,7 @@
 }
 
 body.modal-open{
-  overflow: visible;
+  overflow: hidden;
   .overlay{
     z-index: 100;
     opacity: 1;

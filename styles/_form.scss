@@ -3,7 +3,9 @@ input, textarea{
 }
 
 input{
-  line-height: 4rem;
+  line-height: 2rem;
+  height: 4rem;
+  padding: 2rem 0 0;
   border: solid $grey;
   border-width: 0 0 0.2rem;
 }
@@ -42,6 +44,20 @@ textarea{
   display: flex;
   flex-direction: column;
   width: 100%;  
+}
+
+form{
+  .success-msg{
+    display: none;
+  }  
+  &.success{
+    .success-msg{
+      display: inline;
+    }
+    .btn{
+      display: none;
+    }
+  }
 }
 
 @media screen and (min-width: 750px){

@@ -20,7 +20,11 @@ $(document).ready(function() {
             items:4,
             nav:true,
         }
-    }    
+    },
+    autoplay: true,
+    autoplayHoverPause: true,
+    autoplaySpeed: 5000,
+    smartSpeed: 750
   });
 }
   
@@ -192,21 +196,24 @@ $(document).ready(function() {
   
   /*modals*/
   function closeModal(){
-    var top = $('body').position().top;
-    if($('body').hasClass('modal-open')){
-      $('body').removeAttr('style');
-      $('body').removeClass('modal-open');
-      $('.modal').removeClass('open');
-      $(window).scrollTop(top);
-    }    
+    $('body').removeClass('modal-open');
+    $(this).closest('.modal').removeClass('open');
   }
+  
+  $(document).on('click', function(e){
+    if($(e.target).closest('.overlay').length > 0 
+       && $(e.target).closest('.modal .content').length === 0)
+    {
+      closeModal();
+    };
+  })
   
   $('.close-modal').on('click', closeModal);
   
   $('.open-terms').on('click', function(e){
+    e.preventDefault();
     $('body').addClass('modal-open');
     $('.modal').addClass('open');
-    $('body').css({marginTop: '-'+$(this).offset().top+'px'});
   })
   
   $('#modal-request').on('submit', function(e){

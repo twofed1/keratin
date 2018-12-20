@@ -185,16 +185,18 @@ input, textarea {
 
 /* line 5, Z:/project/keratin_max/code/styles/_form.scss */
 input {
-  line-height: 4rem;
+  line-height: 2rem;
+  height: 4rem;
+  padding: 2rem 0 0;
   border: solid #bebcbc;
   border-width: 0 0 0.2rem; }
 
-/* line 11, Z:/project/keratin_max/code/styles/_form.scss */
+/* line 13, Z:/project/keratin_max/code/styles/_form.scss */
 label {
   line-height: 2.2rem;
   font-size: 1.7rem; }
 
-/* line 16, Z:/project/keratin_max/code/styles/_form.scss */
+/* line 18, Z:/project/keratin_max/code/styles/_form.scss */
 textarea {
   line-height: 4rem;
   border: none;
@@ -203,47 +205,59 @@ textarea {
   background-size: 100% 4rem;
   background-attachment: local; }
 
-/* line 25, Z:/project/keratin_max/code/styles/_form.scss */
+/* line 27, Z:/project/keratin_max/code/styles/_form.scss */
 .field {
   position: relative;
   display: flex;
   flex-direction: column;
   margin-bottom: 4rem; }
   @media screen and (min-width: 750px) {
-    /* line 25, Z:/project/keratin_max/code/styles/_form.scss */
+    /* line 27, Z:/project/keratin_max/code/styles/_form.scss */
     .field {
       margin: 0; }
-      /* line 32, Z:/project/keratin_max/code/styles/_form.scss */
+      /* line 34, Z:/project/keratin_max/code/styles/_form.scss */
       .field__wrapper {
         margin-bottom: 2rem; }
-      /* line 35, Z:/project/keratin_max/code/styles/_form.scss */
+      /* line 37, Z:/project/keratin_max/code/styles/_form.scss */
       .field--textarea {
         margin-bottom: 6rem; } }
 
-/* line 41, Z:/project/keratin_max/code/styles/_form.scss */
+/* line 43, Z:/project/keratin_max/code/styles/_form.scss */
 .field__wrapper {
   display: flex;
   flex-direction: column;
   width: 100%; }
 
+/* line 50, Z:/project/keratin_max/code/styles/_form.scss */
+form .success-msg {
+  display: none; }
+
+/* line 54, Z:/project/keratin_max/code/styles/_form.scss */
+form.success .success-msg {
+  display: inline; }
+
+/* line 57, Z:/project/keratin_max/code/styles/_form.scss */
+form.success .btn {
+  display: none; }
+
 @media screen and (min-width: 750px) {
-  /* line 48, Z:/project/keratin_max/code/styles/_form.scss */
+  /* line 64, Z:/project/keratin_max/code/styles/_form.scss */
   .field {
     flex-direction: row;
     align-items: flex-end; }
-    /* line 51, Z:/project/keratin_max/code/styles/_form.scss */
+    /* line 67, Z:/project/keratin_max/code/styles/_form.scss */
     .field input, .field textarea {
       flex: 1; }
-      /* line 53, Z:/project/keratin_max/code/styles/_form.scss */
+      /* line 69, Z:/project/keratin_max/code/styles/_form.scss */
       .field input:focus, .field textarea:focus {
         outline: none; }
-    /* line 57, Z:/project/keratin_max/code/styles/_form.scss */
+    /* line 73, Z:/project/keratin_max/code/styles/_form.scss */
     .field input {
       max-width: 35rem; }
-    /* line 60, Z:/project/keratin_max/code/styles/_form.scss */
+    /* line 76, Z:/project/keratin_max/code/styles/_form.scss */
     .field label {
       margin-right: 1rem; }
-    /* line 64, Z:/project/keratin_max/code/styles/_form.scss */
+    /* line 80, Z:/project/keratin_max/code/styles/_form.scss */
     .field--textarea label {
       position: absolute;
       top: 0;
@@ -252,7 +266,7 @@ textarea {
       height: 4rem;
       padding-right: 1rem;
       background-color: #fdfbfb; }
-    /* line 73, Z:/project/keratin_max/code/styles/_form.scss */
+    /* line 89, Z:/project/keratin_max/code/styles/_form.scss */
     .field--textarea textarea {
       text-indent: 50px; } }
 
@@ -1045,7 +1059,7 @@ textarea {
 
 /* line 75, Z:/project/keratin_max/code/styles/_modal.scss */
 body.modal-open {
-  overflow: visible; }
+  overflow: hidden; }
   /* line 77, Z:/project/keratin_max/code/styles/_modal.scss */
   body.modal-open .overlay {
     z-index: 100;
