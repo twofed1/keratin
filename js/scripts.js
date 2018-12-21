@@ -218,7 +218,7 @@ $(document).ready(function() {
   
   $('#modal-request').on('submit', function(e){
     e.preventDefault();
-    $(this).addClass('success');
+    $(this).addClass('sent');
   })
 
   
