@@ -1,5 +1,10 @@
 .blog{
   margin: 4rem 0 7rem;
+  >.blog__date{
+    @media screen and (min-width: 1400px) {
+      padding: 0 6rem;
+    }
+  }
   >.title{
     padding: 0 3rem;
     font-weight: 500;
@@ -68,7 +73,7 @@
       margin-bottom: 3rem;
       padding: 0 4rem;
       .date{
-        display: none;
+        /*display: none;*/
       }
     }
   }
