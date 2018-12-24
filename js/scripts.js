@@ -147,28 +147,27 @@ $(document).ready(function() {
   }
   
   /*maps*/
-  if(window.location.pathname.indexOf('salons') > 0){
-    var mapArr = $('.salons__map');
+  if ( $( ".salons__slider" ).length ) {
     var addressArray = [
-      {id: 'map-vlad', coord: '43.1147008,131.9121172', name: ''},
-      {id: 'map-hab', coord: '43.1147008,131.9121172', name: ''},
-      {id: 'map-blag', coord: '43.1147008,131.9121172', name: ''},
-      {id: 'map-moscow', coord: '43.1147008,131.9121172', name: ''},
-    ]
-    mapArr.map((index, el) => {
-      mapInit(el.id, el.coord);
+      {id: 'map-vlad', Latitude: -27.40459, Longitude: 149.55965},
+      {id: 'map-hab', Latitude: 35.43201, Longitude: -119.23692},
+      {id: 'map-blag', Latitude: 6.40014, Longitude: -9.23441},
+      {id: 'map-moscow', Latitude: 18.59138, Longitude: 97.31556},
+    ];
+    
+    addressArray.forEach(function(element) {
+        mapInit(element.id, element.Latitude, element.Longitude);
     });
-  };
+  }
   
-  function mapInit(id, coord){
+  function mapInit(id, Latitude, Longitude){
     var myOptions = {
-        center: new google.maps.LatLng(coord),
+        center: {lat: Latitude, lng: Longitude},
         zoom: 18,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         disableDefaultUI: true
     };
     var map = new google.maps.Map(document.getElementById(id), myOptions);
-    console.log(document.getElementById(id));
   }
   
   /*init tabs*/
